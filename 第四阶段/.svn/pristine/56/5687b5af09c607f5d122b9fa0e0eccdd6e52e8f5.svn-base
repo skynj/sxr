@@ -1,0 +1,161 @@
+@charset "utf-8";
+@font-face {
+	font-family:HiraginoSansGBW3;
+	src: url('../fonts/HiraginoSansGBW3.otf');
+}
+.container{
+    background: url('../img/bg.png') no-repeat;
+    background-size: cover;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin: 0 auto;
+    min-width: 1200px;
+}
+/*头部*/
+.header{
+    height: 77px;
+    border-top: 1px solid #214da6;
+    box-sizing: border-box;
+    padding:0 15px;
+}
+.system-name{
+    background: url('../img/systemName.png') no-repeat;
+    display: inline-block;
+    width: 209px;
+    height: 40px;
+    margin:18.5px 0;
+}
+.year{
+    border:1px solid #293d66;
+    background-color: #0a1d38;
+    width: 140px;
+    height: 32px;
+    color: #ffffff;
+    text-align-last:center;
+    appearance:none;      /*很关键：将默认的select选择框样式清除*/  
+    -moz-appearance:none;  
+    -webkit-appearance:none; 
+    background: url('../img/select.png') no-repeat scroll right center transparent;
+    background-position: right 10px top 13px;
+    padding-right: 10px; 
+    box-sizing: border-box;
+    outline: none;
+    float: left;
+    margin:22.5px 35px 0;
+}
+.year option{
+    background:#0a1d38; 
+}
+.year::-ms-expand{
+    display: none;  /*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+}  
+.header-right{
+    float: right;
+}
+.header-tab1,.header-tab2{
+    float: left;
+}
+.header-tab1 li{
+    width: 110px;
+    height:77px;
+    line-height: 65px;
+    text-align: center;
+}
+.header-tab1 a{
+    color: #fefefe;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+.header-tab1 a span{
+    display: inline-block;
+    height: 30px;
+    line-height: 25px;
+}
+.header-tab1 li.active a{
+    color: #73adff;
+}
+.header-tab1 li.active span{
+    border-bottom: 2px solid #3d88f2;
+}
+.header-tab2 li{
+    width: 50px;
+    height: 77px;
+}
+.header-tab2 li:nth-child(1){
+    background: url('../img/cloud.png') no-repeat;
+    background-size: 28px 18px;
+    background-position: right 11px top 24px;
+}
+.header-tab2 li:nth-child(2){
+    background: url('../img/microsoft.png') no-repeat;
+    background-size: 18px 18px;
+    background-position: right 16px top 24px;
+}
+.header-tab2 li:nth-child(3){
+    background: url('../img/exit.png') no-repeat;
+    background-size: 18px 18px;
+    background-position: right 16px top 24px;
+}
+/*实时监测主体部分*/
+.monitor-main{
+    position: absolute;
+    top: 77px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding:0 15px 15px;
+}
+.monitor-center{
+    height: 34%;
+    background: url('../img/monitor-bg1.png');
+    background-size: 100% 100%;
+    border:1px solid #2d407b;
+    box-sizing: border-box;
+    position: relative;
+}
+.title{
+    color: #fff;
+    font-size: 16px;
+    height: 42px;
+    line-height: 31px;
+    padding-left: 9px;
+}
+.monitor-center .title span:first-child{
+    color: #589dff;
+    font-size: 30px;
+}
+.monitor-center .title span:last-child{
+    margin-left: 24px;
+}
+.monitor-overview{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 42px;
+    left: 9px;
+    right: 9px;
+    bottom: 9px;
+}
+.each-overview{
+    flex:1;
+    border:1px solid #2b4585;
+    background: rgba(23,36,77,0.8);
+    margin-right: 9px;
+    padding:11px 9px 0 0;
+    text-align: center;
+}
+.each-overview:last-child{
+    margin-right: 0;
+}
+.each-overview img{
+    float: right;
+}
+.overview-name{
+
+}

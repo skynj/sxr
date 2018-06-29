@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>履约交易</title>
+    <link type="text/css" rel="stylesheet" href="css/common.css"/>
+    <link type="text/css" rel="stylesheet" href="css/index.css"/>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="js/echarts.min.js"></script>
+    <script type="text/javascript" src="js/myControl.js"></script>
+    <script type="text/javascript" src="js/effect.js"></script>
+    <script type="text/javascript" src="js/charts.js"></script>
+    <script type="text/javascript" src="js/perfect-scrollbar.jquery.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/perfect-scrollbar.min.css"/>
+<body>
+    <div class="container" ng-app="fourPhase" ng-controller="myControl">
+        <header-directive></header-directive>
+        <div class="main">
+            <div class="exchange-center">
+                <h1 class="title">统计概览</h1>
+                <div class="exchangeC-content">
+                    <div class="center1">
+                        <div class="center1-infor" ng-repeat="item in center1">
+                            <p class="overview-name" ng-bind-html="item.name | trustHtml"></p>
+                            <p class="overview-unit" ng-bind-html="item.unit | trustHtml"></p>
+                            <p class="overview-num overviewNum-color1">{{item.num}}</p>
+                            <p class="overview-rate" ng-bind-html="item.rate | trustHtml"></p>
+                        </div>
+                    </div>
+                    <div class="center2 active">
+                        <div class="center1-infor" ng-repeat="item in center2" on-finish>
+                            <p class="overview-name" ng-bind-html="item.name | trustHtml"></p>
+                            <div ng-class="$last?'overviewLine4':'overviewLine1'"></div>
+                            <div class="compleRate" ng-class="$last?'':'none'"><span>{{item.compleRate}}</span>%</div>
+                            <p class="overview-unit" ng-bind-html="item.unit | trustHtml" ng-class="$last?'none':''"></p>
+                            <p class="overview-num overviewNum-color2" ng-class="$last?'none':''">{{item.num}}</p>
+                            <p class="overview-rate" ng-bind-html="item.rate | trustHtml"></p>
+                            
+                        </div>
+                    </div>
+                    <div class="center3">
+                        <div class="center1-infor" ng-repeat="item in center3" ng-class="$last?'borderR':''">
+                            <p class="overview-name" ng-bind-html="item.name | trustHtml"></p>
+                            <p class="overview-unit" ng-bind-html="item.unit | trustHtml"></p>
+                            <p class="overview-num overviewNum-color3">{{item.num}}</p>
+                            <p class="overview-rate" ng-bind-html="item.rate | trustHtml"></p>
+                        </div>
+                        <img src="img/circle.png" alt="" width="16px" height="16px">
+                    </div>
+                </div>
+            </div>
+            <div class="exchange-bottom">
+                <div class="exchangeB-content">
+                    <ul class="exchangeB-tab1" ng-init="exSelect1=0">
+                        <li ng-repeat="item in tab1" ng-class='{active:exSelect1==$index}' ng-click='show3($index)'>{{item.name}}</li>
+                        <div class="clear"></div>
+                    </ul>
+                    <div class="tab1-content1">
+                        <ul class="exchangeB-tab2">
+                            <li ng-repeat="item in tab2" ng-class="{active:$index==0,borderTN:$index==1}">
+                                <span class="classify-img"></span>
+                                <span class="classify">
+                                    {{item.classify}}
+                                </span>
+                                <span class="tab2-num">{{item.num}}</span>
+                            </li>
+                        </ul>
+                        <div class="classify1-table relative">
+                            <table class="elec-table1" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <th width="4.8%">序号</th>
+                                    <th width="25%">企业名称</th>
+                                    <th width="8.5%">所在地区</th>
+                                    <th width="8.5%">履约日期</th>
+                                    <th width="11%">应该履约量（万吨CO<sub>2</sub>e）</th>
+                                    <th width="16.7%">履约上缴自愿核证减排量（万吨CO<sub>2</sub>e）</th>
+                                    <th width="1.5%">+</th>
+                                    <th width="10.9%">履约上缴配额量（万吨CO<sub>2</sub>e）</th>
+                                    <th width="1.5%">=</th>
+                                    <th width="11.6">实际履约上缴量（万吨CO<sub>2</sub>e）</th>
+                                </tr>
+                            </table>
+                            <div class="elec-parent addScroll">
+                                <table class="elec-table2" border="0" cellpadding="0" cellspacing="0">
+                                    <tr ng-repeat="item in elec">
+                                        <td width="4.8%">{{$index+1}}</td>
+                                        <td width="25%">{{item.name}}</td>
+                                        <td width="8.5%">{{item.district}}</td>
+                                        <td width="8.5%">{{item.date}}</td>
+                                        <td width="11%">{{item.numS}}</td>
+                                        <td width="16.7%">{{item.num1}}</td>
+                                        <td width="1.5%"></td>
+                                        <td width="10.9%">{{item.num2}}</td>
+                                        <td width="1.5%"></td>
+                                        <td width="11.6"><span class="table6-status"></span><span class="rest rest3"></span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/try2.js"></script>
+</html>

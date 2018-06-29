@@ -1,0 +1,96 @@
+<!Doctype html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>镇江绿色交通综合管理服务平台云图</title>
+	<link type="text/css" rel="stylesheet" href="css/header.css"/>
+	<link type="text/css" rel="stylesheet" href="css/index.css"/>
+	<link type="text/css" rel="stylesheet" href="css/cloud.css"/>
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/echarts.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/effect.js"></script>
+	<script type="text/javascript" src="js/perfect-scrollbar.jquery.js"></script>
+	<link type="text/css" rel="stylesheet" href="css/perfect-scrollbar.min.css"/>
+	<script type="text/javascript" src="js/bigScreen.js"></script>
+</head>
+<body>
+	<div class="cloud-contain" ng-app="secondPhase" ng-controller="myControl">
+		<div class="year-select">
+			<lable>年份选择</lable>
+			<select>
+				<option>2015年</option>
+				<option>2016年</option>
+				<option>2017年</option>
+				<option>2018年</option>
+			</select>
+		</div>
+		<div class="cloud-left">
+			<div class="tendency tendencyHeight1">
+				<div class="cloud-title-bg">
+					<h2 class="cloud-title">能耗与碳排放走势</h2>
+				</div>
+				<div class="cloud-charts1">
+					
+				</div>
+			</div>
+			<div class="tendency tendencyHeight2">
+				<div class="cloud-title-bg">
+					<h2 class="cloud-title">企业能耗分析</h2>
+				</div>
+				<div class="cloud-charts2">
+					<div id="cloud-bing">
+						<div class="cloud-bingL">
+							<p class="enterprise">覆盖企业</p>
+							<p class="enterprise-data"><span>48</span>家</p>
+							<p class="enterprise-add">同比增长<span>2.2%</span></p>
+						</div>
+						<div class="cloud-bingR">
+							
+						</div>
+					</div>
+					<div id="cloud-bar1"></div>
+				</div>
+			</div>
+		</div>
+		<div class="cloud-center">
+			<div class="center-bottom">
+				
+			</div>
+		</div>
+		<div class="cloud-right">
+			<div class="tendency tendencyHeight5">
+				<div class="cloud-title-bg">
+					<h2 class="cloud-title">交通运输节能减排项目</h2>
+				</div>
+				<div class="cloud-charts1">
+					<div class="bar2-infor">
+						<div ng-class="$last?'barInfor-last':'each-barInfor'" ng-repeat="x in barInfor">
+							<h3>{{x.h3}}</h3>
+							<p><span>{{x.data}}</span>{{x.unit}}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tendency tendencyHeight6">
+				<div class="cloud-title-bg">
+					<h2 class="cloud-title">交通运输行业分析</h2>
+				</div>
+				<div class="cloud-charts2" style="padding:25px 0 0 0;">
+					<div class="bubble-top-legend1">
+						<img src="img/bubble-legend1.png"><span>综合能耗（吨标煤）</span>
+						<img src="img/bubble-legend2.png"><span>温室气体排放量（吨CO2e）</span>
+					</div>
+					<div class="bubble-top-legend2">
+						<img src="img/bubble-legend3.png"><span>碳排放强度（吨CO2e/吨标煤）</span>
+					</div>
+					<div class="bubble">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

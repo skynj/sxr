@@ -1,0 +1,18 @@
+<div class="header">
+    <i class="system-name"></i>
+    <div class="header-right">
+        <select class="year" >
+            <option value="">2016</option>
+            <option value="">2017</option>
+            <option value="">2018</option>
+        </select>
+        <ul class="header-tab1">
+            <li ng-repeat="item in headerTab" ng-class='{active:selected1==$index}' ng-click='show1($index)'><a href="{{item.link}}"><span>{{item.tabTitle}}</span></a></li>
+        </ul>
+        <ul class="header-tab2">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<!-- <title>项目详情</title> -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+    <link type="text/css" rel="stylesheet" href="css/common.css"/>
+    <link type="text/css" rel="stylesheet" href="css/index.css"/>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="js/echarts.min.js"></script>
+    <script type="text/javascript" src="js/myControl.js"></script>
+    <script type="text/javascript" src="js/effect.js"></script>
+    
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+<body>
+    <div class="contain" ng-app="threePhase" ng-controller="myControl" >
+        <div class="mobile-top">
+            <div class="back"><a class="back-icon" href="project.html" /></a></div>
+            <h1 class="title">项目详情</h1>
+        </div>
+        <div class="mobile-main my-1 overflow" ng-repeat="item in projectDetail">
+            <h1 class="project-name">项目基本信息</h1>
+            <table class="base-infor" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <th>项目名称</th>  <!-- valign="top" style="padding-top: 0.226667rem;" -->
+                    <td>{{item.proName}}</td>
+                </tr>
+                <tr>
+                    <th>项目性质</th>
+                    <td>{{item.type}}</td>
+                </tr>
+                <tr>
+                    <th>总投资（亿元）</th>
+                    <td>{{item.amount}}</td>
+                </tr>
+                <tr>
+                    <th>计划开始时间</th>
+                    <td>{{item.startTime}}</td>
+                </tr>
+                <tr>
+                    <th>计划竣工时间</th>
+                    <td>{{item.endTime}}</td>
+                </tr>
+            </table>
+            <h1 class="project-name">所属企业信息</h1>
+            <table class="company-infor" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <th>企业名称</th>
+                    <td>{{item.etpName}}</td>
+                </tr>
+                <tr>
+                    <th>所属行业</th>
+                    <td>{{item.industy}}</td>
+                </tr>
+                <tr>
+                    <th>所在城市</th>
+                    <td>{{item.city}}</td>
+                </tr>
+                <tr>
+                    <th>所在区县</th>
+                    <td>{{item.county}}</td>
+                </tr>
+                <tr>
+                    <th>企业规模</th>
+                    <td>{{item.scale}}</td>
+                </tr>
+                <tr>
+                    <th>企业总产值（亿元）</th>
+                    <td>{{item.outputValue}}</td>
+                </tr>
+            </table>
+            <h1 class="project-name">项目能源消费情况</h1>
+            <table class="consume" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <th>综合能源消费量（吨标准煤）</th>
+                    <td>{{item.consumption}}</td>
+                </tr>
+                <tr>
+                    <th>项目碳排放总量合记（吨CO<sub>2</sub>e）</th>
+                    <td>{{item.dischargeAll}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="mobile-foot">
+            <ul>
+                <li>
+                    <div class="footer-each">
+                        <i class="footer-icon1"></i>
+                        <a href="news.html" class="footerTxt">碳资讯</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="footer-each">
+                        <i class="footer-icon2"></i>
+                        <a href="exchange.html" class="footerTxt">碳交易</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="footer-each">
+                        <i class="footer-icon3"></i>
+                        <a href="knowledge.html" class="footerTxt">碳知识</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="footer-each">
+                        <i class="footer-icon4"></i>
+                        <a href="foot.html" class="footerTxt">碳足迹</a>
+                    </div>
+                </li>
+                <li class="active">
+                    <div class="footer-each">
+                        <i class="footer-icon5"></i>
+                        <a href="my.html" class="footerTxt">我的</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<!-- <title>碳足迹-2</title> -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+    <link type="text/css" rel="stylesheet" href="css/common.css"/>
+    <link type="text/css" rel="stylesheet" href="css/index.css"/>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="js/echarts.min.js"></script>
+    <script type="text/javascript" src="js/myControl.js"></script>
+    <script type="text/javascript" src="js/charts.js"></script>
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+<body>
+    <div class="contain exchange-page" ng-app="threePhase" ng-controller="myControl">
+        <div class="mobile-top">
+            <div class="back"><a class="back-icon" href="foot.html" /></a>返回</div>
+            <h1 class="title">碳足迹</h1>
+        </div>
+        <div class="mobile-main foot2">
+            <h1><span class="name-id">小房子</span>一天产生的碳足迹</h1>
+            <div>
+                <p>
+                    <span class="num">25.03</span></br>
+                    <span class="unit">kg&nbsp;CO<sub>2</sub></span>
+                </p>
+            </div>
+            <a href="foot_1.html">重新计算</a> 
+            <p class="article">一棵树生长40年，平均每年可吸收465公斤二氧化碳，平均每天吸收1.27公斤的二氧化碳。</p>
+        </div>
+        <div class="mobile-foot foot2-foot"></div>
+    </div>
+</body>
+</html>

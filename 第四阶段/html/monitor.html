@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>实时监测</title>
+    <link type="text/css" rel="stylesheet" href="css/common.css"/>
+    <link type="text/css" rel="stylesheet" href="css/index.css"/>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="js/echarts.min.js"></script>
+    <script type="text/javascript" src="js/effect.js"></script>
+    <script type="text/javascript" src="js/charts.js"></script>
+    <script type="text/javascript" src="js/myControl.js"></script>
+    <script type="text/javascript" src="js/perfect-scrollbar.jquery.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/perfect-scrollbar.min.css"/>
+<body>
+    <div class="container" ng-app="fourPhase" ng-controller="myControl">
+        <header-directive></header-directive>
+        <div class="main">
+            <div class="monitor-center">
+                <h1 class="title">实施物联网在线监测企业<span>65</span>家<span>统计概览</span></h1>
+                <div class="overview-parent">
+                    <div class="monitor-overview">
+                        <div class="each-overview" ng-repeat="item in overview" on-finish>
+                            <img ng-src="img/more{{$index+1}}.png" alt="">
+                            <div class="clear"></div>
+                            <div class="overview-infor">
+                                <p class="overview-name" ng-bind-html="item.name | trustHtml"></p>
+                                <p class="overview-unit" ng-bind-html="item.unit | trustHtml" ng-class="$last?'none':''"></p>
+                                <p class="overview-num" ng-class="'overviewNum-color'+($index+1)" ng-class="$last?'none':''">{{item.num}}</p>
+                                <p class="overview-rate"  ng-class="$last?'none':''">{{item.rate}}</p>
+                                <div id="overview-line" ng-class="$last?'overviewLine2':'overviewLine1'"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="monitor-bottom">
+                <div class="monitor-tendency">
+                    <h1 class="title left">主要能源消耗趋势</h1>
+                    <ul class="right" ng-init="monitorS=0">
+                        <li ng-repeat="item in monitorTab" ng-class='{active:monitorS==$index}' ng-click='show($index)'>月份</li>
+                    </ul>
+                    <div class="tendency-parent">
+                        <div class="each-tendency" ng-repeat="item in tendency" on-finish>
+                            <div class="tendency-left">
+                                <div>
+                                    <p class="tendency-name" ng-bind-html="item.name | trustHtml"></p>
+                                    <p class="tendency-num" ng-class="'tendencyNum-color'+($index+1)">{{item.num}}</p>
+                                    <p class="tendency-all">{{item.all}}</p>
+                                </div>
+                            </div>
+                            <div class="tendency-right">
+                                <div id="line{{$index+1}}" class="line"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="monitor-infor">
+                    <h1 class="title left">企业能耗监测详情</h1>
+                    <p class="right monitor-time">当前时间：2017年11月20日16时</p>
+                    <div class="clear"></div>
+                    <table class="monitor-table" border="0" cellpadding="0" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th width="6.25%">序号</th>
+                                <th width="26.25%">企业名称</th>
+                                <th width="13.275%">累计耗煤（吨）</th>
+                                <th width="13.275%">累计耗电（万千瓦时）</th>
+                                <th width="13.275%">累计耗蒸汽（万立方米）</th>
+                                <th width="13.275%">累计耗天然气（万立方米）</th>
+                                <th width="14.4%">进入企业碳资产管理系统</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <div class="table-parent addScroll">
+                        <table class="monitor-table" border="0" cellpadding="0" cellspacing="0">
+                            <tbody class="scrollbar">
+                                <tr ng-repeat="item in infor">
+                                    <td width="6.25%">{{$index+1}}</td>
+                                    <td width="26.25%">{{item.company}}</td>
+                                    <td width="13.275%">{{item.num1}}</td>
+                                    <td width="13.275%">{{item.num2}}</td>
+                                    <td width="13.275%">{{item.num3}}</td>
+                                    <td width="13.275%">{{item.num4}}</td>
+                                    <td width="14.4%"><span class="next"></span><span class="rest"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/try2.js"></script>
+</html>

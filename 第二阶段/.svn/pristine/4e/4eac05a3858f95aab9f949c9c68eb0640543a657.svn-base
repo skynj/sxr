@@ -1,0 +1,91 @@
+var app = angular.module('secondPhase', []);
+app.controller('myControl', function($scope) {
+    // $scope.news =[
+    // 	{h2:"通知公告"},
+    // 	{h2:"政策法规"}
+    // ];
+	$scope.list1 =[
+    	{div:"1",a:"镇江高速岗前操大比武活动成...",span:"06-02"},
+    	{div:"2",a:"关于公布已接入我市网约车监...",span:"05-22"},
+    	{div:"3",a:"高管处依法拆除青银高速K0+6...",span:"05-22"},
+    	{div:"4",a:"打通联动渠道 凝聚全民力量...",span:"05-22"},
+        {div:"5",a:"镇江高速岗前操大比武活动成...",span:"06-02"},
+        {div:"6",a:"关于公布已接入我市网约车监...",span:"05-22"},
+        {div:"7",a:"高管处依法拆除青银高速K0+6...",span:"05-22"},
+        {div:"8",a:"打通联动渠道 凝聚全民力量...",span:"05-22"}
+    ];
+	$scope.list2 =[
+    	{div:"1",a:"镇江高速岗前操大比武活动成...",span:"06-02"},
+    	{div:"2",a:"关于公布已接入我市网约车监...",span:"05-22"},
+    	{div:"3",a:"高管处依法拆除青银高速K0+6...",span:"05-22"},
+    	{div:"4",a:"打通联动渠道 凝聚全民力量...",span:"05-22"},
+    	{div:"5",a:"打通联动渠道 凝聚全民力量...",span:"05-22"},
+        {div:"6",a:"镇江高速岗前操大比武活动成...",span:"06-02"},
+        {div:"7",a:"关于公布已接入我市网约车监...",span:"05-22"},
+        {div:"8",a:"高管处依法拆除青银高速K0+6...",span:"05-22"},
+        {div:"9",a:"打通联动渠道 凝聚全民力量...",span:"05-22"},
+        {div:"10",a:"打通联动渠道 凝聚全民力量...",span:"05-22"}
+    ];
+    $scope.list3 =[
+    	{a:"镇江市交通局客运企业年度运行情况调查表——2016年",span:"2017-07-04"},
+    	{a:"镇江市交通局客运企业年度运行情况调查表——2016年",span:"2017-07-04"},
+    	{a:"镇江市交通局客运企业年度运行情况调查表——2016年",span:"2017-07-04"},
+        {a:"镇江市交通局客运企业年度运行情况调查表——2016年",span:"2017-07-04"},
+        {a:"镇江市交通局客运企业年度运行情况调查表——2016年",span:"2017-07-04"},
+        {a:"镇江市交通局客运企业年度运行情况调查表——2016年",span:"2017-07-04"}
+    ];
+    $scope.data =[
+        {src:"img/energy-2.png",h3:"能耗总量",num:"20.0",unit:"万吨标煤",percent:"8.22%"},
+        {src:"img/energy-average2.png",h3:"百公里能耗平均值",num:"900",unit:"辆车",percent:"6.47%"},
+        {src:"img/car2.png",h3:"企业车辆总数",num:"56.0",unit:"万吨CO2e",percent:"5.24%"},
+        {src:"img/carbon-emission2.png",h3:"碳排放总量",num:"17.7",unit:"千克标准煤/百公里",percent:"4.25%"},
+        {src:"img/carbon-emission-avg2.png",h3:"百公里碳排量平均值",num:"80.0",unit:"千克CO2e/百公里",percent:"8.26%"},
+        {src:"img/mileage2.png",h3:"监测车辆总数",num:"800",unit:"辆车",percent:"7.59%"}
+    ];
+
+    $scope.scene=[
+        {h3:"基准情景",data:"113.79"},
+        {h3:"低碳情景",data:"108.56"},
+        {h3:"深蓝情景",data:"96.55"},
+        {h3:"强化低碳情景",data:"92.33"}
+    ]
+
+    $scope.tab=[
+        {src:"img/energy-icon1.png",h2:"项目概览"},
+        {src:"img/energy-icon2.png",h2:"项目监管"},
+        {src:"img/energy-icon3.png",h2:"能效分析"},
+        {src:"img/energy-icon4.png",h2:"项目库维护"}
+    ]
+    $scope.indicator=[
+        {name:"项目总数",data:"48",unit:"个"},
+        {name:"总投资",data:"325.98",unit:"亿元"},
+        {name:"节能减排投资",data:"82.7",unit:"亿元"},
+        {name:"申报节能减排专项资金",data:"8042.78",unit:"万元"},
+        {name:"预计能源消耗量",data:"118.98",unit:"万吨标煤"},
+        {name:"节能量",data:"5.8",unit:"万吨标煤"}
+    ]
+
+    $scope.supervisionDiv1=[
+        {src:"img/supervision-icon1.png",h3:"项目数量",data:"48",unit:"个"},
+        {src:"img/supervision-icon2.png",h3:"投资金额",data:"85",unit:"亿元"},
+        {src:"img/supervision-icon3.png",h3:"节能减排投资",data:"1.2",unit:"亿元"},
+        {src:"img/supervision-icon4.png",h3:"申请节能减排资金",data:"85",unit:"亿元"}
+    ]
+
+    $scope.supervisionDiv2=[
+        {src:"img/supervision-icon5.png",h3:"省交通运输节能减排规划建设项目"},
+        {src:"img/supervision-icon6-2.png",h3:"新型运输组织项目"},
+        {src:"img/supervision-icon7-2.png",h3:"新能源、清洁能源装备应用"}
+    ]
+    $scope.infor=[
+        {leftP:"项目数量",data:"12",unit:"个"},
+        {leftP:"申请节能减排资金",data:"6000",unit:"万元"},
+        {leftP:"投资金额",data:"3.2",unit:"亿元"},
+        {leftP:"节能减排投资",data:"6000",unit:"万元"}
+    ]
+    $scope.barInfor=[
+        {h3:"项目数量",data:"58",unit:"个"},
+        {h3:"项目投资总额",data:"2.3",unit:"亿元"},
+        {h3:"项目进度",data:"64",unit:"%"}
+    ]
+});

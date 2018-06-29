@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>碳资讯-1</title>
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+    <link type="text/css" rel="stylesheet" href="css/common.css"/>
+    <link type="text/css" rel="stylesheet" href="css/index.css"/>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="js/echarts.min.js"></script>
+    <script type="text/javascript" src="js/myControl.js"></script>
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+<body>
+    <div class="contain" ng-app="threePhase" ng-controller="myControl">
+        <div class="mobile-top">
+            <div class="back"><a class="back-icon" href="news.html" /></a>返回</div>
+            <!-- <a class="back" href="news.html">返回</a> -->
+        </div>
+        <div class="mobile-main newsDetail-main" ng-repeat="item in newsDetail">
+            <h1 class="newsDetail-title">{{item.title}}</h1>
+            <p class="newsDetail-website"><span class="newsDetail-time">{{item.date}}</span>{{item.resource}}</p>
+            <img src="img/img1.png">
+            <div>
+                <p>{{item.articleTxt}}</p>
+            </div>
+        </div>
+        <div class="mobile-foot">
+            <ul>
+                <li class="active">
+                    <div class="footer-each">
+                        <i class="footer-icon1"></i>
+                        <a href="news.html" class="footerTxt">碳资讯</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="footer-each">
+                        <i class="footer-icon2"></i>
+                        <a href="exchange.html" class="footerTxt">碳交易</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="footer-each">
+                        <i class="footer-icon3"></i>
+                        <a href="knowledge.html" class="footerTxt">碳知识</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="footer-each">
+                        <i class="footer-icon4"></i>
+                        <a href="foot.html" class="footerTxt">碳足迹</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="footer-each">
+                        <i class="footer-icon5"></i>
+                        <a href="my.html" class="footerTxt">我的</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

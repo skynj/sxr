@@ -1,0 +1,127 @@
+<!Doctype html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>镇江绿色交通综合管理服务平台-首页</title>
+	<link type="text/css" rel="stylesheet" href="css/header.css"/>
+	<link type="text/css" rel="stylesheet" href="css/index.css"/>
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/effect.js"></script>
+	<script type="text/javascript" src="js/echarts.js"></script>
+	<script type="text/javascript" src="js/pieWithbar2.js"></script>
+	<script src="https://cdn.bootcss.com/angular.js/1.5.0-beta.0/angular-sanitize.min.js"></script>
+</head>
+<body>
+	<div class="contain energy-bg">
+		<div class="header">
+			<div class="logo-containter"><img src="img/title3.png" alt="title3" class="pointer"></div>
+			<div class="header-nav">
+				<ul class="pageList efficiency-width">
+					<li><a href="javascript:void(0)">城市</a></li>
+					<li><a href="javascript:void(0)">行业</a></li>
+					<li><a href="javascript:void(0)">企业</a></li>
+					<li class="pageActive"><a href="javascript:void(0)">重点项目</a></li>
+				</ul>
+				<ul class="baseList">
+					<li class="news-nav borderLeftNone" style="border-left: none;">
+						<a href="javascript:void(0)">
+							<div class="remind"><span class="news-alert">9</span></div>
+							<span>消息</span>
+						</a>
+					</li>
+					<li class="user-nav">
+						<a href="javascript:void(0)">
+							<div class="user"></div>
+							<span>个人中心</span>
+						</a>
+					</li>
+					<li class="exit-nav">
+						<a href="javascript:void(0)">
+							<div class="exit"></div>
+							<span>退出</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="energy-main" ng-app="secondPhase" ng-controller="myControl">
+			<div class="left-tab">
+				<div class="each-tab" ng-repeat="y in tab">
+					<div class="each-tab-border">
+						<img src="img/tringle-right.png" alt="tringle-right" class="tringle-right">
+						<img ng-src="{{y.src}}" alt="energy-icon1" ng-class="'energy-icon'+($index+1)">
+						<h3>{{y.h2}}</h3>
+					</div>
+				</div>
+			</div>
+			<div class="project-pop">
+				<h2 class="pop-title">项目信息 
+					<img src="img/close.png" alt="close" class="pop-close">
+				</h2>
+				<div class="project-message">
+					<div class="message1">
+						<p class="marginB25"><span>项目名称：</span>官塘新城绿色交通综合示范区建设项目</p>
+						<p><span>建设单位：</span>官塘新城绿色交通综合示范区建设项目</p>
+					</div>					
+					<div class="message2">
+						<p><span>总投资：</span>XX市XXXXX公司</p>
+						<p><span>项目类型：</span><span class="message-data">39.1</span>亿元</p>
+						<p><span>开始时间：</span>2013年</p>
+						<p><span>预计减排量：</span>1.3万吨/年</p>
+					</div>
+					<div class="message3">
+						<p><span>建设进度：</span>90%</p>
+						<p><span>节能投资：</span><span class="message-data">3000</span>万元</p>
+						<p><span>竣工时间：</span>2017年</p>
+						<p><span>是否申请节能减排资金：</span>是</p>
+					</div>
+					<div class="message-border"></div>
+						<div class="message4-left">
+							<p ><span>责任人：</span>胡志明</p>
+							<p><span>邮箱：</span>zhiming1989@163.com</p>
+						</div>
+						<p class="message4-right"><span>电话：</span>18036529652</p>
+					<div class="clearFloat"></div>
+
+				</div>
+			</div>
+			<div class="energy-right">
+				<div class="energy-right-top">
+					<h2 class="h2-title">总量指标</h2>
+					<div class="project-content">
+						<div ng-class="'indicator-padding width'+($index+1)" ng-repeat="y in indicator">												
+							<div class="each-indicator">
+								<div class="inner-border">
+									<p class="indecator-name">{{y.name}}</p>
+									<p class="indecator-data">{{y.data}}</p>
+									<p class="indecator-unit">{{y.unit}}</p>
+								</div>
+							</div>
+						</div>						
+					</div>
+				</div>
+				<div class="energy-right-bottom">
+					<div class="energy-right-bottom1">
+						<h2 class="h2-title">项目进度</h2>
+						<div class="project-content">
+							<div id="pie"></div>
+						</div>
+					</div>
+					<div class="energy-right-bottom2">
+						<h2 class="h2-title">项目类型</h2>
+						<div class="project-content">
+							<div id="bar"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="supervision-right" style="display: none;">
+				
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>

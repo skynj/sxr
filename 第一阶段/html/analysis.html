@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>综合分析</title>
+	<link type="text/css" rel="stylesheet" href="css/header.css"/>
+	<link type="text/css" rel="stylesheet" href="css/index.css"/>
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/echarts.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/barWithLine.js"></script>
+	<script type="text/javascript" src="js/bigBar.js"></script>
+	<script type="text/javascript" src="js/bubble.js"></script>
+</head>
+<body>
+	<div  class="analysis-bg absolute">
+		<div id="header" class="bg-opacity absolute">
+			<div class="logo-containter"><img src="img/system.png" alt="system" class="pointer"></div>
+			<div class="header-nav">
+				<ul class="pageList">
+					<li class="border-left-none pageListActive"><a href="javascript:void(0)">综合分析</a></li>
+					<li><a href="javascript:void(0)">省级自评</a></li>
+					<li><a href="task_flex.html">市级考核</a></li>
+					<li><a href="management.html">体系管理</a></li>
+				</ul>
+				<ul class="baseList">
+					<li>
+						<div class="setting"></div>
+						<span>设置</span>
+					</li>
+					<li>
+						<div class="remind"><span class="news-alert">9</span></div>
+						<span>消息</span>
+					</li>
+					<li class="user-nav">
+						<div class="user"></div>
+						<span>王建国</span>
+					</li>
+					<li>
+						<div class="exit"></div>
+						<span>退出</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="content-analysis" class="absolute">
+			<div class="analysis-titleLine">
+				<div class="analysis-select">
+					<lable>指标体系</lable>
+					<select>
+						<option>“十三五”温室气体排放目标考核体系</option>
+						<option>“十三五”温室气体排放目标考核体系</option>
+					</select>
+					<lable style="margin-left:15px; ">考核年份</lable>
+					<select style="width:103px; ">
+						<option>2016</option>
+						<option>2017</option>
+					</select>
+				</div>
+				<span>当前区域：江苏省</span>
+			</div>
+			<div class="analysis-center">
+				<div class="analysis-left">
+					<div class="left-one">
+						<div class="grade">
+							<h1>考核评分</h1>
+							<p><img src="img/write.png" alt="write"><span>92</span>分</p>
+						</div>
+						<div class="result">
+							<h1>考核结果</h1>
+							<p><img src="img/result.png" alt="result"></p>
+						</div>
+						<div class="rate">
+							<h1>指标完成率</h1>
+							<p class="relative"><img src="img/privince-1.png" alt="privince-1" class="absolute"><img src="img/privence-2.png" alt="privence-2" class="absolute"><span>97</span>%</p>
+						</div>
+					</div>
+					<div class="left-two">
+						<div class="left-two-left">
+							<h1>单位GDP二氧化碳排放下降指标完成情况</h1>
+							<div class="bar-with-broken" id="bar-with-broken1">
+								
+							</div>
+						</div>
+						<div class="left-two-right">
+							<div>
+								<p><img src="img/flower.png" alt="flower"></p>
+								<p class="left-right-title">碳排放总量</p>
+								<p class="number">92</p>
+								<p class="unit">万吨CO2/亿元</p>
+								<p class="tendency"><img src="img/up.png" alt="up">年度增幅<span>4.5</span>%</p>
+							</div>
+						</div>
+					</div>
+					<div class="left-two">
+						<div class="left-two-left">
+							<h1>单位GDP二氧化碳排放下降指标完成情况</h1>
+							<div class="bar-with-broken" id="bar-with-broken2">
+								
+							</div>
+						</div>
+						<div class="left-two-right">
+							<div>
+								<p><img src="img/cloud.png" alt="cloud"></p>
+								<p class="left-right-title">碳排放总量</p>
+								<p class="number">92</p>
+								<p class="unit">万吨CO2/亿元</p>
+								<p class="tendency"><img src="img/down.png" alt="down">年度降低<span>5.68</span>%</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="analysis-right">
+					<div class="right-func">	
+						<select>
+							<option>考核得分</option>
+							<option>92</option>
+							<option>85</option>
+						</select>
+						<div>	
+							<img src="img/bar.png" alt="bar" class="bar-one">	
+							<img src="img/buble.png" alt="buble" class="bubble-one">
+						</div>
+					</div>
+					<div id="map"></div>
+				</div>
+			</div>
+			<div class="analysis-footer relative">
+				<img src="img/play.png" alt="play" class="play">
+				<div class="border-div absolute"></div>
+				<div class="item2016">
+					<img src="img/firstyear.png" alt="firstyear">
+					<p>2016</p>
+				</div>
+				<div class="item2017">
+					<img src="img/eachyear.png" alt="eachyear">
+					<p>2017</p>
+				</div>
+				<div class="item2018">
+					<img src="img/eachyear.png" alt="eachyear">
+					<p>2018</p>
+				</div>
+				<div class="item2019">
+					<img src="img/eachyear.png" alt="eachyear">
+					<p>2019</p>
+				</div>
+				<div class="item2020">
+					<img src="img/eachyear.png" alt="eachyear">
+					<p>2020</p>
+				</div>
+			</div>
+		</div>
+		<div id="shade" class="none"></div>
+		<div class="tab-right none">	
+			<img src="img/map.png" alt="map" class="map">
+			<img src="img/bar.png" alt="bar" class="bar-two">	
+			<img src="img/buble.png" alt="buble" class="bubble-two">
+		</div>
+		<div id="bubble-chart" class="none">
+			<img src="img/close.png" alt="close" class="close">
+			<div class="bubble-left">
+				<h3>江苏省碳排放目标考核气泡图</h3>
+				<div id="bubble"></div>
+			</div>
+			<div class="bubble-right">
+				<h3>指标配置</h3>
+				<div class="axis">
+					<lable>X轴指标&rarr;</lable>		
+					<select>
+						<option>考核评分</option>
+						<option>其他</option>
+					</select>
+				</div>
+				<div class="axis">
+					<lable>Y轴指标&uarr;</lable>		
+					<select>
+						<option>指标完成率</option>
+						<option>其他</option>
+					</select>
+				</div>
+				<div class="radius">
+					<lable>半径指标O</lable>		
+					<select>
+						<option>单位GDP碳排放下降指标完成情况</option>
+						<option>其他</option>
+					</select>
+				</div>
+				<div class="legend-bubble">
+					<h2>图例</h2>
+					<div class="legend-bubble-left">
+						<p><img src="img/suzhou.png" alt="suzhou"><span>苏州市</span></p>
+						<p><img src="img/changzhou.png" alt="changzhou"><span>常州市</span></p>
+						<p><img src="img/lianyungang.png" alt="lianyungang"><span>连云港市</span></p>
+						<p><img src="img/zhenjiang.png" alt="zhenjiang"><span>镇江市</span></p>
+						<p><img src="img/huaian.png" alt="huaian"><span>淮安市</span></p>
+						<p><img src="img/suqian.png" alt="suqian"><span>宿迁市</span></p>
+						<p><img src="img/xuzhou.png" alt="xuzhou"><span>徐州市</span></p>
+					</div>
+					<div class="legend-bubble-right">
+						<p><img src="img/yangzhou.png" alt="yangzhou"><span>扬州市</span></p>
+						<p><img src="img/yancheng.png" alt="yancheng"><span>盐城市</span></p>
+						<p><img src="img/taizhou.png" alt="taizhou"><span>泰州市</span></p>
+						<p><img src="img/wuxi.png" alt="wuxi"><span>无锡市</span></p>
+						<p><img src="img/nanjing.png" alt="nanjing"><span>南京市</span></p>
+						<p><img src="img/nanjing.png" alt="nanjing"><span>南通市</span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="bar-chart" class="none">
+			<img src="img/close.png" alt="close" class="close">
+			<div class="bar-left">
+				<div class="bar-select">
+					<lable>指标名称&nbsp;</lable>
+					<select>
+						<option>单位GDP碳排放目标完成情况</option>
+						<option>其他</option>
+					</select>
+				</div>
+				<div id="bar"></div>
+			</div>
+			<div class="bar-right">
+				<h3>图例</h3>
+				<div class="legend-city">
+					<p><img src="img/nanjing.png" alt="nanjing"><span>南京市</span></p>
+					<p><img src="img/suzhou.png" alt="suzhou"><span>苏州市</span></p>
+					<p><img src="img/changzhou.png" alt="changzhou"><span>常州市</span></p>
+					<p><img src="img/wuxi.png" alt="wuxi"><span>无锡市</span></p>
+					<p><img src="img/zhenjiang.png" alt="zhenjiang"><span>镇江市</span></p>
+					<p><img src="img/yangzhou.png" alt="yangzhou"><span>扬州市</span></p>
+					<p><img src="img/taizhou.png" alt="taizhou"><span>泰州市</span></p>
+					<p><img src="img/nanjing.png" alt="nanjing"><span>南通市</span></p>
+					<p><img src="img/yancheng.png" alt="yancheng"><span>盐城市</span></p>
+					<p><img src="img/suqian.png" alt="suqian"><span>宿迁市</span></p>
+					<p><img src="img/xuzhou.png" alt="xuzhou"><span>徐州市</span></p>
+					<p><img src="img/lianyungang.png" alt="lianyungang"><span>连云港市</span></p>	
+					<p><img src="img/huaian.png" alt="huaian"><span>淮安市</span></p>			
+				</div>
+				<div class="legend-grade">
+					<p><img src="img/grade.png" alt="grade"><span>平均分</span></p>
+					<p><img src="img/average.png" alt="average"><span>考核评分</span></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	
+	<!-- <script type="text/javascript" src="js/privence.js"></script>														 -->
+</body>
+</html>

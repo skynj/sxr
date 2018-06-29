@@ -1,0 +1,180 @@
+<!Doctype html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>首页</title>
+	<link type="text/css" rel="stylesheet" href="css/header.css"/>
+	<link type="text/css" rel="stylesheet" href="css/index.css"/>
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular-ui-router.min.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+	<script type="text/javascript" src="js/effect.js"></script>
+	<script type="text/javascript" src="js/perfect-scrollbar.jquery.js"></script>
+	<link type="text/css" rel="stylesheet" href="css/perfect-scrollbar.min.css"/>
+	<script type="text/javascript" src="js/echarts.js"></script>
+	<script type="text/javascript" src="js/pieWithbar.js"></script>
+	<script src="https://cdn.bootcss.com/angular.js/1.5.0-beta.0/angular-sanitize.min.js"></script>
+</head>
+<body>
+	<div class="contain">
+		<div class="header">
+			<div class="logo-containter"><img src="img/title.png" alt="title" class="pointer"></div>
+			<div class="type">企业端</div>
+			<div class="header-nav">
+				<ul class="pageList">
+					<li class="index-page pageActive"><a href="javascript:void(0)">首页</a></li>
+					<li><a href="javascript:void(0)">数据报送</a></li>
+					<li><a href="javascript:void(0)">实时监测</a></li>
+					<li><a href="javascript:void(0)">能耗管理</a></li>
+					<li><a href="javascript:void(0)">碳排放管理</a></li>
+				</ul>
+				<ul class="baseList">
+					<li class="news-nav">
+						<a href="javascript:void(0)">
+							<div class="remind"><span class="news-alert">9</span></div>
+							<span>消息</span>
+						</a>
+					</li>
+					<li class="user-nav">
+						<a href="javascript:void(0)">
+							<div class="user"></div>
+							<span>个人中心</span>
+						</a>
+					</li>
+					<li class="exit-nav">
+						<a href="javascript:void(0)">
+							<div class="exit"></div>
+							<span>退出</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="main" ng-app="secondPhase" ng-controller="myControl">
+			<div class="index-left">
+				<div class="left-content left-one">
+					<h2 class="h2-title">通知公告<input type="button" value="更多" /></h2>
+					<div class="news-div">
+						<div class="news-ul news-ul-one addScroll">
+							<ul class="scrollbar">
+								<li ng-repeat="y in list1" ng-class="$last ? 'item-last' : 'item-not-last'"><div>{{$index+1}}</div><a href="javascript:void(0)">{{y.a}}</a><span>{{y.span}}</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="left-content left-two">
+					<h2 class="h2-title">政策法规<input type="button" value="更多"  class="which-img"/></h2>
+					<div class="news-div">
+						<div class="news-ul news-ul-two addScroll">
+							<ul class="scrollbar">
+								<li ng-repeat="y in list2" ng-class="$last ? 'item-last' : 'item-not-last'"><div>{{$index+1}}</div><a href="javascript:void(0)">{{y.a}}</a><span>{{y.span}}</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="left-content left-three">
+					<h2 class="h2-title">待办事项<span class="left-alert">11</span><input type="button" value="更多" /></h2>
+					<div class="news-div">
+						<div class="wait-ul addScroll">
+					<!-- <div  class="wait-ul scrollbar-style"> -->
+							<ul class="scrollbar">
+								<li ng-repeat="y in list3" ng-class="$last ? 'item-last' : 'item-not-last'"><img src="img/wait.png" alt="wait"><a href="javascript:void(0)">{{y.a}}</a><span>{{y.span}}</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="index-right">
+				<div class="index-right-top">
+					<h2 class="h2-title">综合概览
+						<div>
+							<img src="img/calendar.png" alt="calendar">
+							<span class="marginRight2">截止</span><span>2017-05</span>
+						</div>
+					</h2>
+					<div class="top-content">
+						<div class="each-data" ng-repeat="y in data">
+							<!--  -->
+							<div class="data-thisYear">
+								<img ng-src="img/index-img{{$index}}.png">
+								<div class="data-content">
+									<h3>{{y.h3}}</h3>
+									<p class="data-num"><span class="number">{{y.num}}</span><span class="unit" ng-bind-html="y.unit"></span></p>
+								</div>
+							</div>
+							<div class="data-comparison">
+								<p class="comparison-left">同比2016年</p>						
+								<p class="comparison-right add-color"><img src="img/add.png" alt="add">{{y.percent}}</p>								
+							</div>
+						</div>						
+					</div>
+				</div>
+				<div class="index-right-bottom">
+					<div class="bottom-left">
+						<h2 class="h2-title">能源结构分析
+							<div>
+								<img src="img/calendar.png" alt="calendar">
+								<span class="marginRight2">截止</span><span>2017-05</span>
+							</div>
+						</h2>
+						<div class="left-charts">
+							<div id="bing">
+							
+							</div>
+							<div class="bing-legend">
+								<div class="topborder"></div>
+								<div class="legend-content">
+									<div class="right22">
+										<img src="img/blue2.png" alt="blue2">
+										<span>汽油</span>
+									</div>
+									<div class="right22">
+										<img src="img/green.png" alt="green">
+										<span>柴油</span>
+									</div>
+									<div class="right22">
+										<img src="img/yellow.png" alt="yellow">
+										<span>天然气</span>
+									</div>
+									<div class="right22">
+										<img src="img/blue1.png" alt="blue1">
+										<span>电</span>
+									</div>
+									<div class="right0">
+										<img src="img/purple.png" alt="purple">
+										<span>其他</span>
+									</div>
+								</div>
+							</div>
+						</div>												
+					</h2>
+					</div>
+					<div class="bottom-right">
+						<h2 class="h2-title">能源与碳排放趋势</h2>
+						<div class="left-charts">
+							<div id="bar">
+								
+							</div>
+							<div class="bing-legend">
+								<div class="topborder"></div>
+								<div class="legend-content2">
+									<div class="right22">
+										<img src="img/blue2.png" alt="blue2">
+										<span>能耗量(万吨标煤)</span>
+									</div>
+									<div class="right0">
+										<img src="img/green2.png" alt="green2">
+										<span>碳排放量(万吨CO<sub>2</sub>e)</span>
+									</div>							
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>

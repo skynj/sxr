@@ -1,0 +1,12 @@
+var app = angular.module('fourPhase', []);
+app.controller('myControl',  ['$scope', '$http', function ($scope, $http)  {
+    
+}]);
+app.directive("headerDirective", function() {
+    return {
+        restrict : "EA",
+        replace: true,        
+        // template : '<div class="header"><i class="system-name"></i><div class="header-right"><select class="year" ><option value="">2016</option><option value="">2017</option><option value="">2018</option></select><ul class="header-tab1"><li class="active"><a href="javascript:void(0)"><span>实时监测</span></a></li><li><a href="javascript:void(0)"><span>报告核查</span></a></li><li><a href="javascript:void(0)"><span>履约交易</span></a></li></ul><ul class="header-tab2"><li></li><li></li><li></li></ul></div></div>'
+        templateUrl:'../header.html'
+    };
+});

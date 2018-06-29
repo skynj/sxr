@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>实时监测</title>
+    <link type="text/css" rel="stylesheet" href="css/common.css"/>
+    <link type="text/css" rel="stylesheet" href="css/index.css"/>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="js/echarts.min.js"></script>
+    <!-- <script type="text/javascript" src="js/myControl.js"></script> -->
+    <script type="text/javascript" src="js/effect.js"></script>
+    <script type="text/javascript" src="js/charts.js"></script>
+<body>
+    <div class="container" ng-app="fourPhase" ng-controller="myControl">
+        <header-directive></header-directive>
+        <div class="monitor-main">
+            <div class="monitor-center">
+                <h1 class="title">实施物联网在线监测企业<span>65</span>家<span>统计概览</span></h1>
+                <div class="monitor-overview">
+                    <div class="each-overview">
+                        <img src="img/more.png" alt="">
+                        <p class="overview-name">碳排放量</p>
+                        <p class="overview-unit">(万吨CO2e)</p>
+                        <p class="overview-num">838.59</p>
+                        <p class="overview-rate">占全市规模工业 34.8%</p>
+                    </div>
+                    <div class="each-overview">
+                        <img src="img/more.png" alt="">
+                        <p class="overview-name">碳排放量</p>
+                        <p class="overview-unit">(万吨CO2e)</p>
+                        <p class="overview-num">838.59</p>
+                        <p class="overview-rate">占全市规模工业 34.8%</p>
+                    </div>
+                    <div class="each-overview">
+                        <img src="img/more.png" alt="">
+                        <p class="overview-name">碳排放量</p>
+                        <p class="overview-unit">(万吨CO2e)</p>
+                        <p class="overview-num">838.59</p>
+                        <p class="overview-rate">占全市规模工业 34.8%</p>
+                    </div>
+                    <div class="each-overview">
+                        <img src="img/more.png" alt="">
+                        <p class="overview-name">碳排放量</p>
+                        <p class="overview-unit">(万吨CO2e)</p>
+                        <p class="overview-num">838.59</p>
+                        <p class="overview-rate">占全市规模工业 34.8%</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+<script>
+    var app = angular.module('fourPhase', []);
+    app.controller('myControl',  ['$scope', '$http', function ($scope, $http)  {
+        
+    }]);
+    app.directive("headerDirective", function() {
+        return {
+            restrict : "EA",
+            replace: true,        
+            // template : '<div class="header"><i class="system-name"></i><div class="header-right"><select class="year" ><option value="">2016</option><option value="">2017</option><option value="">2018</option></select><ul class="header-tab1"><li class="active"><a href="javascript:void(0)"><span>实时监测</span></a></li><li><a href="javascript:void(0)"><span>报告核查</span></a></li><li><a href="javascript:void(0)"><span>履约交易</span></a></li></ul><ul class="header-tab2"><li></li><li></li><li></li></ul></div></div>'
+            templateUrl:'header1.html'
+        };
+    });
+</script>
+</html>

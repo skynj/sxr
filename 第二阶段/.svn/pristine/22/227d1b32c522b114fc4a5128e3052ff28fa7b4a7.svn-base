@@ -1,0 +1,219 @@
+$(function(){
+	barWithBroken();
+    // console.log(Math.sqrt(6250000) / 5e2);
+})
+function barWithBroken(){
+	// 路径配置
+    require.config({
+        paths:{
+        echarts:'js/build/dist'
+        // echarts:'http://echarts.baidu.com/build/dist'
+        }
+    });
+    require(
+	    [
+	    'echarts',
+	    'echarts/chart/map',
+	    'echarts/chart/bar',
+	    'echarts/chart/line',
+        'echarts/chart/pie',
+	    ],
+	    function(ec){
+        	var myChart1 = ec.init(document.getElementById('pie'));
+            var myChart2 = ec.init(document.getElementById('bar'));
+            var option_my1 = {
+            	    tooltip : {
+                        show: false,
+                        trigger: 'item',
+                        position : function(p) {
+                            // 位置回调
+                            // console.log && console.log(p);
+                            return [p[0] + 45, p[1] - 50];
+                        }, 
+                        // formatter: "{a} <br/>{b} : {c} ({d}%)"
+                        formatter: function (params,ticket,callback) {
+                            console.log(params); 
+                            console.log(params.name);
+                            console.log(params.percent);
+                            // var res = '<p>' + params.name +'</p>';
+                            var res = '<p style="font-size:15px;color:#ffffff;">' + params.name +'</p>';
+                                res += '<p style="font-size:36px;font-family: GOTHICB;" class="pieColor">' + params.percent +'<span style="font-size:16px;">%</span></p>'
+                                return res;                        
+                        },
+                    }, 
+                    legend: {
+                        data:['已建项目','在建项目'],
+                        // x:353,
+                        y:'bottom',
+                        x:'center',
+                        textStyle:{    //图例文字的样式
+                            color:'#b1cefc',
+                            fontSize:12
+                        }
+                    },                   
+                    series : [
+                        {
+                            type:'pie',
+                            radius : ['60%', '75%'],  //内半径和外半径
+                            itemStyle : {
+                                normal : {
+                                    label : {
+                                        show : false
+                                    },
+                                    labelLine : {
+                                        show : false
+                                    }
+                                },
+                                emphasis : {
+                                    label : {
+                                        show : true,
+                                        position : 'center',
+                                        formatter: '{b}\n{d}%',
+                                        textStyle : {
+                                            fontSize : '30',
+                                            fontWeight : 'bold'
+                                        }
+                                    }
+                                }
+                            },
+                            data:[
+                                {value:65.3, name:'已建项目'},
+                                {value:34.7, name:'在建项目'}
+                            ],                                                  
+                        }
+                    ],
+                     color: ['rgb(67,139,251)','rgb(255,130,46)']
+        	};
+        	var option_my2 = {
+                // tooltip: {
+                //     // show:false,
+                //     trigger: 'axis',
+                //     axisPointer:{
+                //         type:'none'
+                //     },
+                //     backgroundColor: 'rgba(0,18,49,0.8)',
+                //     borderColor:'#000',
+                //     borderWidth:1,
+                //     position : function(p) {
+                //         // 位置回调
+                //         // console.log && console.log(p);
+                //         return [p[0] - 104, p[1] - 150];
+                //     }, 
+                //     formatter: function (params,ticket,callback) {
+                //         console.log(params); 
+                //         console.log(params[0][1]);
+                //         console.log(params[0][0]);
+                //         var res =  '<div style="border:1px solid #254065;margin:-4px;position:relative;"><img src="img/bar-tringle.png" style="position:absolute;bottom:-8px;left:50%;margin-left:-7px;"><p style="font-size:15px;color:#ffffff;padding:10px 14px;border-bottom:1px solid #000;">' + params[0][1] +'</p>';
+                //             res += '<div style="border-top:1px solid #254065;padding:14px 14px 13px 14px;"><p style="color:#89b7ed;font-size:12px;"><span style="letter-spacing:4px;">' + params[0][0] +'</span>：<span style="color:#438bfb;font-size:18px;font-family:GOTHICB;padding-left:4px;display:inline-block;width:38px;">' + params[0][2] + '</span><span>万吨标煤</span>';
+                //             res += '<p style="color:#89b7ed;font-size:12px;">' + params[1][0] +'：<span style="color:#32de96;font-size:18px;font-family:GOTHICB;padding-left:4px;display:inline-block;width:38px;">' + params[1][2] + '</span><span>万吨CO<sub>2</sub>e</span></div></div>';
+                //           return res;                        
+                //     },
+                // },
+                grid: {
+                    borderColor:'#1b3568',
+                    borderWidth:0,
+                    x:80,
+                    y:33, 
+                    y2:30, 
+                    x2:10
+                },
+                xAxis : [
+                    {
+                        type : 'value',
+                        // boundaryGap : true, //定义charts两侧是否有留白，true为有，false为顶格开始
+                        min:0,
+                        max:18,
+                        axisTick: {show:false},
+                        axisLabel: {
+                            textStyle: {
+                                color: '#96c7ff',//坐标值得具体的颜色
+                                fontSize: 12
+                            }
+                        },  
+                        splitNumber:9,
+                        splitLine: {
+                            show: true,  //  改变轴线颜色
+                            lineStyle: {  // 使用深浅的间隔色
+                                color: ['#003a87']
+                            }                            
+                        },                        
+                        axisLine: {    //改变轴颜色
+                            lineStyle: {
+                                color: '#284e8d',
+                                width:0
+                            }
+                        }
+                    }
+                ],
+                yAxis : [
+                    {
+                        type : 'category',
+                        data : ['绿色循环1','绿色循环2','节能环保','集约高效','绿色循环','官塘新城','智慧交通','绿色循环3'],                        
+                        axisLabel : {
+                            formatter: '{value}'
+                        },
+                        axisTick: {show:false},
+                        // splitNumber:5,
+                        axisLabel: {
+                            textStyle: {
+                                color: '#96c7ff',//坐标值得具体的颜色
+                                fontSize:14
+                            }
+                        }, 
+                        splitNumber:0,
+                        splitLine: {
+                            show: true,  //  改变轴线颜色
+                            lineStyle: {  // 使用深浅的间隔色
+                                color: ['#003a87'],
+                                width:0
+                            }                            
+                        },                     
+                        axisLine: {    //改变轴颜色
+                            lineStyle: {
+                                color: '#003a87',
+                                width:0
+                            }
+                        }
+                    }
+                ],
+                series : [
+                    {
+                        type:'bar',
+                        barWidth : 20,
+                        itemStyle: {
+                            normal: {
+                                color: (function (){
+                                   var zrColor = require('zrender/tool/color');
+                                   return zrColor.getLinearGradient(
+                                       70, 0, 150, 0,
+                                       [[0, '#01eaff'],[1, '#438bfb']]
+                                   )
+                                })(),   
+                                label:{show:false},
+                                barBorderRadius:[5,5,0,0]
+                            },
+                            emphasis:{
+                                barBorderRadius:[5,5,0,0]
+                            }
+                        },
+                        data:[2, 3.8, 7.8, 3.8, 15, 1.8, 8.3, 7.8]
+                    }               
+                ]
+            };
+            
+        	
+        	myChart1.setOption(option_my1);  
+            myChart2.setOption(option_my2);          
+            window.onresize = function(){
+                myChart1.resize();
+                myChart2.resize();
+            }   
+            var pie = myChart.chart.pie;
+            var shape = pie.shapeList[pie.shapeList.length - 1];
+            pie.shapeHandler.onmouseover({target:shape});
+            pie.zr.addHoverShape(shape );
+            pie.zr.refreshHover();       
+        }
+	);
+
+}

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>报告核查</title>
+    <link type="text/css" rel="stylesheet" href="css/common.css"/>
+    <link type="text/css" rel="stylesheet" href="css/index.css"/>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="js/echarts.min.js"></script>
+    <script type="text/javascript" src="js/effect.js"></script>
+    <script type="text/javascript" src="js/try2.js"></script>
+    <script type="text/javascript" src="js/myControl.js"></script>
+    <script type="text/javascript" src="js/charts.js"></script>
+    <script type="text/javascript" src="js/perfect-scrollbar.jquery.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/perfect-scrollbar.min.css"/>
+<body>
+    <div class="container" ng-app="fourPhase" ng-controller="myControl">
+        <header-directive></header-directive>
+        <div class="main">
+            <div class="check-center">
+                <h1 class="title2">统计概览</h1>
+                <div class="center-tab">
+                    <ul>
+                        <li>温室气体排放报告企业<span>600</span>家</li>
+                        <li class="active">纳入碳排放交易企业<span>300</span>家</li>
+                        <li>纳入碳排放核查企业<span>100</span>家</li>
+                    </ul>
+                    <div class="eachTab-infor">
+                        <div class="each-overview infor-detail" ng-repeat="item in checkTab1" on-finish>
+                            <img ng-src="img/more{{$index+2}}.png" alt="">
+                            <div class="clear"></div>
+                            <div class="overview-infor">
+                                <p class="overview-name" ng-bind-html="item.name | trustHtml"></p>
+                                <p class="overview-unit" ng-bind-html="item.unit | trustHtml" ng-class="$last?'none':''"></p>
+                                <p class="overview-num" ng-class="'overviewNum-color'+($index+1)" ng-class="$last?'none':''">{{item.num}}</p>
+                                <p class="overview-rate"  ng-class="$last?'none':''">{{item.rate}}</p>
+                                <div id="overview-line" ng-class="$last?'overviewLine3':'overviewLine1'"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="check-bottom-parent">
+                <div class="check-bottom">
+                    <div class="check-tab relative">
+                        <div class="tab-border"></div>
+                        <!-- <div class="tabParent"> -->
+                            <div class="item1">
+                                <img src="img/dot1.png" alt="">
+                                <h1>直报计划</h1>
+                            </div>
+                            <div class="item2">
+                                <img src="img/dot2.png" alt="">
+                                <h1>报告管理</h1>
+                            </div>
+                            <div class="item3">
+                                <img src="img/dot2.png" alt="">
+                                <h1>核查管理</h1>
+                            </div>
+                            <div class="item4">
+                                <img src="img/dot2.png" alt="">
+                                <h1>复查管理</h1>
+                            </div>
+                            <div class="item5">
+                                <img src="img/dot2.png" alt="">
+                                <h1>审核确认</h1>
+                            </div>
+                        <!-- </div> -->
+                    </div>
+                    <div class="check-step">
+                        <div class="step1">
+                            <div class="step1-each" ng-repeat="item in step1">
+                                <div class="step1-title">
+                                    <h1><img src="img/icon{{$index+1}}.png" alt="">{{item.title}}</h1>
+                                </div>
+                                <div class="step1-content">
+                                    <div>
+                                        <span class="step1-item">{{item.title1}}</span>
+                                        <div class="step1-unit">
+                                            <span class="step1-num">{{item.num1}}</span>
+                                            <span ng-bind-html="item.unit1 | trustHtml"></span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="step1-item">{{item.title2}}</span>
+                                        <div class="step1-unit">
+                                            <span class="step1-num">{{item.num2}}</span>
+                                            <span ng-bind-html="item.unit2 | trustHtml"></span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="step1-item">{{item.title3}}</span>
+                                        <div class="step1-unit">
+                                            <span class="step1-num">{{item.num3}}</span>
+                                            <span ng-bind-html="item.unit3 | trustHtml"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step2">
+                            <div class="step2-title">
+                                <h1>报告进度</h1>
+                                <input type="button" value="详情查看" ng-click="showTable1()"/>
+                            </div>
+                            <div class="step2-content">
+                                <div class="step2-left">
+                                    <h2 class="h2-title">距离报送结束还有<span>48</span>天</h2>
+                                    <div class="step2-pie">
+                                        <div class="relative" ng-repeat="item in step2Pie" on-finish>
+                                            <svg width="100%" height="90%" viewbox="0 0 430 430">
+                                                <defs>
+                                                    <linearGradient id="color{{$index+1}}" x1="0%" y1="0%" x2="100%" y2="0%">
+                                                        <stop offset="0%" stop-color='#2a63ee'/>
+                                                        <stop offset="100%" stop-color='#3d88f2'/>
+                                                    </linearGradient>
+                                                </defs>
+                                                <circle cx="220" cy="210" r="130" stroke-width="30" stroke="#445a94" fill="none"></circle>
+                                                <circle cx="220" cy="210" r="130" stroke-width="30" stroke="url(#color{{$index+1}})" fill="none" transform="matrix(0,-1,1,0,10,430)" stroke-dasharray="0 1069" class="circle{{$index+1}}"></circle>
+                                            </svg>
+                                            <div class="pieNum"><span class="spanColor{{$index+1}}">{{item.num}}</span>家</div>
+                                            <div class="pieRate">占<span class="spanColor{{$index+1}}">{{item.rate}}</span></div>
+                                            <div class="pieTitle">{{item.title}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="step2-right">
+                                    <ul class="step2-tab">
+                                        <li class="active">按地区</li>
+                                        <li>按行业</li>
+                                    </ul>
+                                    <div class="clear"></div>
+                                    <div class="step2-bar"></div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="step3">
+                            <div class="step2-title">
+                                <h1>核查进度</h1>
+                                <input type="button" value="详情查看" ng-click="showTable2()"/>
+                            </div>
+                            <div class="step2-content">
+                                <div class="step2-left">
+                                    <h2 class="h2-title">距离报送结束还有<span>48</span>天</h2>
+                                    <div class="step2-pie">
+                                        <div class="relative" ng-repeat="item in step3Pie" on-finish>
+                                            <svg width="100%" height="90%" viewbox="0 0 430 430">
+                                                <defs>
+                                                    <linearGradient id="color{{$index+4}}" x1="0%" y1="0%" x2="100%" y2="0%">
+                                                        <stop offset="0%" stop-color='#2a63ee'/>
+                                                        <stop offset="100%" stop-color='#3d88f2'/>
+                                                    </linearGradient>
+                                                </defs>
+                                                <circle cx="220" cy="210" r="130" stroke-width="30" stroke="#445a94" fill="none"></circle>
+                                                <circle cx="220" cy="210" r="130" stroke-width="30" stroke="url(#color{{$index+4}})" fill="none" transform="matrix(0,-1,1,0,10,430)" stroke-dasharray="0 1069" class="circle{{$index+4}}"></circle>
+                                            </svg>
+                                            <div class="pieNum2"><span class="spanColor{{$index+1}}">{{item.num}}</span>家</div>
+                                            <div class="pieRate2">占<span class="spanColor{{$index+1}}">{{item.rate}}</span></div>
+                                            <div class="pieTitle">{{item.title}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="step2-right step3-right">
+                                    <h2 class="h2-title">核查委托机构<span>8</span>家</h2>
+                                    <div class="step3-bar"></div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="step5">
+                            <ul class="confirm-tab1" ng-init="confT1=0">
+                                <li ng-repeat="item in confirmTab1" ng-bind-html="item.name | trustHtml" ng-class='{active:confT1==$index}' ng-cilck="show($index,'name')"></li>
+                            </ul>
+                            <div class="confirm-right relative">
+                                <ul class="confirm-tab2" ng-init="confT2=0">
+                                    <li ng-repeat="item in confirmTab2" ng-class='{active:confT2==$index}'>{{item.name}}</li>
+                                </ul>
+                                <ul class="confirm-tab3">
+                                    <li class="active">全部（60）{{confT1}}</li>
+                                    <li>已通过（50）</li>
+                                    <li>待审核（5）</li>
+                                    <li>已退回（5）</li>
+                                    <div class="clear"></div>
+                                </ul>
+                                <div class="check-select">
+                                    <i></i>
+                                    <span>批量审核</span>
+                                </div>
+                                <div class="tab3-content relative">
+                                    <table class="table5" border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <th width="4.5%">序号</th>
+                                            <th width="19.5%">企业名称</th>
+                                            <th width="7.2%">核算行业</th>
+                                            <th width="7.2%">所在地区</th> 
+                                            <th width="10.3%">温室气体排放（万吨CO<sub>2</sub>e）</th>
+                                            <th width="10%">可疑数据项数量</th>
+                                            <th width="12.5%">企业碳排放总量变化率（%）</th>
+                                            <th width="12.5%">隐含排放因子变化率（%）</th>
+                                            <th width="8.15%">排放报告</th>
+                                            <th width="8.15%">审核状态</th>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                    <div class="table6-parent addScroll">
+                                        <table class="table6" border="0" cellpadding="0" cellspacing="0">
+                                            <tr ng-repeat="item in table6">
+                                                <td width="4.5%">{{$index+1}}</td>
+                                                <td width="19.5%">{{item.name}}</td>
+                                                <td width="7.2%">{{item.profession}}</td>
+                                                <td width="7.2%">{{item.district}}</td>
+                                                <td width="10.3%">{{item.emissionfactor}}</td>
+                                                <td width="10%">{{item.num}}</td>
+                                                <td width="12.5%">{{item.change1}}</td>
+                                                <td width="12.5%">{{item.change2}}</td>
+                                                <td width="8.15%"><i class="download"></i><i class="look"></i></td>
+                                                <td width="8.15%"><span class="table6-status">{{item.status}}</span><span class="rest rest3"></span></td>
+                                            </tr>
+                                        </table>
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="masking" ng-show="isShow"></div>
+        <div class="pop-up" ng-show="isShow1">
+            <div class="pop-title">
+                <h1>详情查看</h1>
+                <i ng-click="pop1Close()"></i>
+            </div>
+            <div class="pop1-content relative">
+                <form action="">
+                    <label for="pop1-name">企业名称：</label>
+                    <input type="text" id="pop1-name" class="formBase">
+                    <label for="pop1-district">所在地区：</label>
+                    <select id="pop1-district" class="formBase">
+                        <option value="">吴江区</option>
+                        <option value="">吴江区</option>
+                    </select>
+                    <label for="pop1-profession">所核算行业：</label>
+                    <select id="pop1-profession" class="formBase">
+                        <option value="">发电</option>
+                        <option value="">化工</option>
+                    </select>
+                    <label for="pop1-status">报送状态：</label>
+                    <select id="pop1-status" class="formBase">
+                        <option value="">未报送</option>
+                        <option value="">已报送</option>
+                    </select>
+                    <input type="button" value="搜索" class="pop1-search">
+                    <input type="button" value="催报" class="pop1-urgency">
+                </form>
+                <table class="pop-table1" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <th width="6%">序号</th>
+                        <th width="13%">企业名称</th>
+                        <th width="11%">组织机构代码</th>
+                        <th width="8.7%">所在地区</th>
+                        <th width="8.7%">核算行业</th>
+                        <th width="8.7%">报送状态</th>
+                        <th width="8.7%">监测计划</th>
+                        <th width="12%">报送日期</th>
+                        <th width="12%">报送截止日期</th>
+                        <th width="11.2%">催报次数</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+                <div class="table2-parent addScroll">
+                    <table class="pop-table2" border="0" cellpadding="0" cellspacing="0">
+                        <tr ng-repeat="item in poptable2">
+                            <td width="6%">{{$index+1}}</td>
+                            <td width="13%">{{item.name}}</td>
+                            <td width="11%">{{item.code}}</td>
+                            <td width="8.7%">{{item.district}}</td>
+                            <td width="8.7%">{{item.profession}}</td>
+                            <td width="8.7%">{{item.status}}</td>
+                            <td width="8.7%">{{item.plan}}</td>
+                            <td width="12%">{{item.date}}</td>
+                            <td width="12%">{{item.endDate}}</td>
+                            <td width="11.2%"><span class="table2-time">{{item.time}}</span><span class="rest rest2"></span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="page-jump">
+                    <div class="jump-left">
+                        每页
+                        <select name="" id="">
+                            <option value="1">08</option>
+                            <option value="2">09</option>
+                            <option value="3">10</option>
+                            <option value="4" selected = "selected">11</option>
+                            <option value="5">12</option>
+                        </select>
+                        条信息，共28页
+                    </div>
+                    <div class="jump-right">
+                        <a href="javascript:void(0)">&lt;</a>
+                        <a href="javascript:void(0)">1</a>
+                        <a href="javascript:void(0)" class="active">2</a>
+                        <a href="javascript:void(0)">3</a>
+                        <a href="javascript:void(0)">4</a>
+                        <span class="ellipsis">...</span>
+                        <a href="javascript:void(0)">28</a>
+                        <a href="javascript:void(0)">&gt;</a>
+                        跳转到<input type="text">页
+                        <input type="button" value="跳转">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pop-up" ng-show="isShow2">
+            <div class="pop-title">
+                <h1>详情查看</h1>
+                <i ng-click="pop2Close()"></i>
+            </div>
+            <div class="pop1-content relative">
+                <div class="need-do">
+                    <div class="needDo{{$index+1}}" ng-repeat="item in needDo">
+                        <div>{{item.name}}<span>{{item.num}}</span>{{item.unit}}</div>
+                    </div>
+                </div>
+                <form action="">
+                    <label for="pop1-name2">企业名称：</label>
+                    <input type="text" id="pop1-name2" class="formBase">
+                    <label for="pop1-district2">所在地区：</label>
+                    <select id="pop1-district2" class="formBase">
+                        <option value="">吴江区</option>
+                        <option value="">XX区</option>
+                    </select>
+                    <label for="pop1-profession2">所核算行业：</label>
+                    <select id="pop1-profession2" class="formBase">
+                        <option value="">发电</option>
+                        <option value="">化工</option>
+                    </select>
+                    <input type="button" value="搜索" class="pop1-search">
+                    <input type="button" value="催查" class="pop1-urgency">
+                </form>
+                <table class="pop-table3" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <th width="6%">序号</th>
+                        <th width="13%">企业名称</th>
+                        <th width="8.7%">所在地区</th>
+                        <th width="8.7%">核算行业</th>
+                        <th width="11.6%">核算机构</th>
+                        <th width="8.7%">核查状态</th>
+                        <th width="14%">复查机构</th>
+                        <th width="8.7%">复查状态</th>
+                        <th width="10.3%">按时完成率</th>
+                        <th width="10.3%">提出申诉率</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+                <div class="table4-parent addScroll">
+                    <table class="pop-table2" border="0" cellpadding="0" cellspacing="0">
+                        <tr ng-repeat="item in poptable4">
+                            <td width="6%">{{$index+1}}</td>
+                            <td width="13%">{{item.name}}</td>
+                            <td width="8.7%">{{item.district}}</td>
+                            <td width="8.7%">{{item.profession}}</td>
+                            <td width="11.6%">{{item.institute}}</td>
+                            <td width="8.7%">{{item.status}}</td>
+                            <td width="14%">{{item.institute2}}</td>
+                            <td width="8.7%">{{item.status2}}</td>
+                            <td width="10.3%" class="fontS">{{item.complete}}</td>
+                            <td width="10.3%" class="fontS"><span class="table2-time">{{item.appeal}}</span><span class="rest rest2"></span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="page-jump">
+                    <div class="jump-left">
+                        每页
+                        <select name="" id="">
+                            <option value="1">08</option>
+                            <option value="2">09</option>
+                            <option value="3">10</option>
+                            <option value="4" selected = "selected">11</option>
+                            <option value="5">12</option>
+                        </select>
+                        条信息，共28页
+                    </div>
+                    <div class="jump-right">
+                        <a href="javascript:void(0)">&lt;</a>
+                        <a href="javascript:void(0)">1</a>
+                        <a href="javascript:void(0)" class="active">2</a>
+                        <a href="javascript:void(0)">3</a>
+                        <a href="javascript:void(0)">4</a>
+                        <span class="ellipsis">...</span>
+                        <a href="javascript:void(0)">28</a>
+                        <a href="javascript:void(0)">&gt;</a>
+                        跳转到<input type="text">页
+                        <input type="button" value="跳转">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+<script>
+    function rate(range,circleSelect){
+        var percent = range / 100,
+            perimeter = Math.PI * 2 * 170,
+            circle = document.getElementsByClassName(circleSelect)[0];
+        circle.setAttribute('stroke-dasharray', perimeter * percent + " " + perimeter * (1- percent));
+    }
+</script>
+</html>

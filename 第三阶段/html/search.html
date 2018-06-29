@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<!-- <title>搜索项目</title> -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+    <link type="text/css" rel="stylesheet" href="css/common.css"/>
+    <link type="text/css" rel="stylesheet" href="css/index.css"/>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="js/echarts.min.js"></script>
+    <script type="text/javascript" src="js/myControl.js"></script>
+    <script type="text/javascript" src="js/effect.js"></script>
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+<body>
+    <div class="contain" ng-app="threePhase" ng-controller="myControl">
+        <div class="mobile-top">
+            <a class="back" href="javascript:window.history.go(-1)"><i class="back-icon" /></i>返回</a>
+            <h1 class="title">碳项目</h1>
+        </div>
+        <div class="mobile-main my-1">
+            <div class="search2">
+                <input type="text" placeholder="搜索项目" >
+                <i class="search2-icon"></i>
+            </div>
+            <h1 class="project-name">搜索结果</h1>
+            <div class="overflow">
+                <a href="#" class="each-project" ng-repeat="item in project" id="{{item.id}}">
+                    <h1>{{item.title}}</h1>
+                    <div><span>{{item.status}}</span><i class="next3"></i></div>
+                    <div><i class="time"></i>开始时间：<span>{{item.startTime}}</span></div>
+                </a>
+            </div>
+        </div>
+        <div class="mobile-foot">
+            <ul>
+                <li>
+                    <a class="footer-each"  href="news.html">
+                        <i class="footer-icon1"></i>
+                        <span class="footerTxt">碳资讯</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="footer-each" href="exchange.html">
+                        <i class="footer-icon2"></i>
+                        <span class="footerTxt">碳交易</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="footer-each" href="knowledge.html">
+                        <i class="footer-icon3"></i>
+                        <span class="footerTxt">碳知识</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="footer-each" href="foot.html">
+                        <i class="footer-icon4"></i>
+                        <span class="footerTxt">碳足迹</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a class="footer-each" href="my.html">
+                        <i class="footer-icon5"></i>
+                        <span class="footerTxt">我的</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

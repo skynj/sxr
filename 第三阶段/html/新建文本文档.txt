@@ -1,0 +1,18 @@
+news.html、knowledge_1.html: 1、next箭头不同屏幕大小有问题          已改
+	   2、图片显示问题
+	   3、有图片无图片的判断问题                                已改
+
+withImgNews.html、knowledge_2.html: 1、post请求问题     	    已改
+
+withoutImgNews.html: 1、post请求问题     	       		    已改
+
+knowledge.html: 1、图片显示问题
+
+exchange.html: 1、tab切换效果未写           			    已改
+	       2、legned少线
+
+foot_1.html: 1、单选、多选按钮的样式未改			    已改
+
+foot_2.html: 1、屏幕大小改变时小圆球的位置问题
+
+

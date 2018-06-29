@@ -1,0 +1,181 @@
+{ 
+	"headerTab":[
+		{"link":"monitor.html","tabTitle":"实时监测"},
+		{"link":"check.html","tabTitle":"报告核查"},
+		{"link":"exchange.html","tabTitle":"履约交易"}
+	],
+	"monitorTab":[
+		{"tab1":"月份"},
+		{"tab1":"季度"},
+		{"tab1":"年份"}
+	],
+	"overview": [ 
+		{ "name": "碳排放量", "unit": "(万吨CO<sub>2</sub>e)", "num": "838.59","rate":"占全市规模工业 34.8%" },
+		{ "name": "生产总值", "unit": "(亿元)", "num": "838.59","rate":"占全市规模工业 34.8%" },
+		{ "name": "生产总值", "unit": "(亿元)", "num": "838.59","rate":"占全市规模工业 34.8%" },
+		{ "name": "利税总额<span class='last-unit'>(亿元)</span>"}
+	],
+	"tendency": [ 
+		{ "name": "煤炭<span>（吨）</span>","num": "27776.90 ","all":"（监测点位110个）"},
+		{ "name": "电力<span>（万千瓦时）</span>","num": "811.57","all":"（监测点位110个）"},
+		{ "name": "蒸汽<span>（万立方米）</span>","num": "777.23","all":"（监测点位110个）"},
+		{ "name": "天然气<span>（万立方米）</span>","num": "2254.67","all":"（监测点位110个）"}
+	],
+	"infor":[
+		{"company":"台玻昆山玻璃有限公司","num1":"6782.54","num2":"568.45","num3":"343.4","num4":"12.4"},
+		{"company":"台玻昆山玻璃有限公司","num1":"6782.54","num2":"568.45","num3":"343.4","num4":"12.4"},
+		{"company":"台玻昆山玻璃有限公司","num1":"6782.54","num2":"568.45","num3":"343.4","num4":"12.4"},
+		{"company":"台玻昆山玻璃有限公司","num1":"6782.54","num2":"568.45","num3":"343.4","num4":"12.4"},
+		{"company":"台玻昆山玻璃有限公司","num1":"6782.54","num2":"568.45","num3":"343.4","num4":"12.4"},
+		{"company":"台玻昆山玻璃有限公司","num1":"6782.54","num2":"568.45","num3":"343.4","num4":"12.4"},
+		{"company":"台玻昆山玻璃有限公司","num1":"6782.54","num2":"568.45","num3":"343.4","num4":"12.4"},
+		{"company":"台玻昆山玻璃有限公司","num1":"6782.54","num2":"568.45","num3":"343.4","num4":"12.4"},
+		{"company":"台玻昆山玻璃有限公司","num1":"6782.54","num2":"568.45","num3":"343.4","num4":"12.4"},
+		{"company":"台玻昆山玻璃有限公司","num1":"6782.54","num2":"568.45","num3":"343.4","num4":"12.4"},
+		{"company":"台玻昆山玻璃有限公司","num1":"6782.54","num2":"568.45","num3":"343.4","num4":"12.4"},
+		{"company":"台玻昆山玻璃有限公司","num1":"6782.54","num2":"568.45","num3":"343.4","num4":"12.4"},
+		{"company":"台玻昆山玻璃有限公司","num1":"6782.54","num2":"568.45","num3":"343.4","num4":"12.4"},
+		{"company":"台玻昆山玻璃有限公司","num1":"6782.54","num2":"568.45","num3":"343.4","num4":"12.4"},
+		{"company":"台玻昆山玻璃有限公司","num1":"6782.54","num2":"568.45","num3":"343.4","num4":"12.4"}
+	],
+	"checkTab1": [ 
+		{ "name": "报告碳排放总量", "unit": "(万吨CO<sub>2</sub>e)", "num": "838.59","rate":"占全市规模工业 34.8%" },
+		{ "name": "能源消耗", "unit": "(亿元)", "num": "838.59","rate":"占全市规模工业 34.8%" },
+		{ "name": "生产总值<span class='last-unit'>(亿元)</span>"}
+	],
+	"step1": [
+		{"title": "直报门槛", "title1":"直报基准年：", "num1":"2013", "unit1":"年", "title2":"能源消费报告门槛：", "num2":"5000", "unit2":"吨标煤", "title3":"碳排放报告门槛：", "num3":"10000", "unit3":"吨CO<sub>2</sub>e"},
+		{"title": "直报计划", "title1":"报送开始日期：", "num1":"2017-01-30", "unit1":"", "title2":"报送截止日期：", "num2":"2017-04-30", "unit2":"", "title3":"审核截止日期：", "num3":"2017-05-30", "unit3":""},
+		{"title": "直报名单", "title1":"报送企业总数：", "num1":"600", "unit1":"家", "title2":"报送企业较上年：", "num2":"+10", "unit2":"家", "title3":"停报企业较上年：", "num3":"-10", "unit3":"家"}
+	],
+	"poptable2":[
+		{"name": "吴江发电公司","code": "test00005","district": "吴江区","profession": "发电","status": "未报送","plan": "暂未备案","date": "2017-01-20","endDate": "2017-04-20","time": "0"},
+		{"name": "吴江发电公司","code": "test00005","district": "吴江区","profession": "发电","status": "未报送","plan": "暂未备案","date": "2017-01-20","endDate": "2017-04-20","time": "0"},
+		{"name": "吴江发电公司","code": "test00005","district": "吴江区","profession": "发电","status": "未报送","plan": "暂未备案","date": "2017-01-20","endDate": "2017-04-20","time": "0"},
+		{"name": "吴江发电公司","code": "test00005","district": "吴江区","profession": "发电","status": "未报送","plan": "暂未备案","date": "2017-01-20","endDate": "2017-04-20","time": "0"},
+		{"name": "吴江发电公司","code": "test00005","district": "吴江区","profession": "发电","status": "未报送","plan": "暂未备案","date": "2017-01-20","endDate": "2017-04-20","time": "0"},
+		{"name": "吴江发电公司","code": "test00005","district": "吴江区","profession": "发电","status": "未报送","plan": "暂未备案","date": "2017-01-20","endDate": "2017-04-20","time": "0"},
+		{"name": "吴江发电公司","code": "test00005","district": "吴江区","profession": "发电","status": "未报送","plan": "暂未备案","date": "2017-01-20","endDate": "2017-04-20","time": "0"},
+		{"name": "吴江发电公司","code": "test00005","district": "吴江区","profession": "发电","status": "未报送","plan": "暂未备案","date": "2017-01-20","endDate": "2017-04-20","time": "0"},
+		{"name": "吴江发电公司","code": "test00005","district": "吴江区","profession": "发电","status": "未报送","plan": "暂未备案","date": "2017-01-20","endDate": "2017-04-20","time": "0"},
+		{"name": "吴江发电公司","code": "test00005","district": "吴江区","profession": "发电","status": "未报送","plan": "暂未备案","date": "2017-01-20","endDate": "2017-04-20","time": "0"},
+		{"name": "吴江发电公司","code": "test00005","district": "吴江区","profession": "发电","status": "未报送","plan": "暂未备案","date": "2017-01-20","endDate": "2017-04-20","time": "0"},
+		{"name": "吴江发电公司","code": "test00005","district": "吴江区","profession": "发电","status": "未报送","plan": "暂未备案","date": "2017-01-20","endDate": "2017-04-20","time": "0"},
+		{"name": "吴江发电公司","code": "test00005","district": "吴江区","profession": "发电","status": "未报送","plan": "暂未备案","date": "2017-01-20","endDate": "2017-04-20","time": "0"},
+		{"name": "吴江发电公司","code": "test00005","district": "吴江区","profession": "发电","status": "未报送","plan": "暂未备案","date": "2017-01-20","endDate": "2017-04-20","time": "0"},
+		{"name": "吴江发电公司","code": "test00005","district": "吴江区","profession": "发电","status": "未报送","plan": "暂未备案","date": "2017-01-20","endDate": "2017-04-20","time": "0"},
+		{"name": "吴江发电公司","code": "test00005","district": "吴江区","profession": "发电","status": "未报送","plan": "暂未备案","date": "2017-01-20","endDate": "2017-04-20","time": "0"},
+		{"name": "吴江发电公司","code": "test00005","district": "吴江区","profession": "发电","status": "未报送","plan": "暂未备案","date": "2017-01-20","endDate": "2017-04-20","time": "0"},
+		{"name": "吴江发电公司","code": "test00005","district": "吴江区","profession": "发电","status": "未报送","plan": "暂未备案","date": "2017-01-20","endDate": "2017-04-20","time": "0"},
+		{"name": "吴江发电公司","code": "test00005","district": "吴江区","profession": "发电","status": "未报送","plan": "暂未备案","date": "2017-01-20","endDate": "2017-04-20","time": "0"},
+		{"name": "吴江发电公司","code": "test00005","district": "吴江区","profession": "发电","status": "未报送","plan": "暂未备案","date": "2017-01-20","endDate": "2017-04-20","time": "0"},
+		{"name": "吴江发电公司","code": "test00005","district": "吴江区","profession": "发电","status": "未报送","plan": "暂未备案","date": "2017-01-20","endDate": "2017-04-20","time": "0"},
+		{"name": "吴江发电公司","code": "test00005","district": "吴江区","profession": "发电","status": "未报送","plan": "暂未备案","date": "2017-01-20","endDate": "2017-04-20","time": "0"},
+		{"name": "吴江发电公司","code": "test00005","district": "吴江区","profession": "发电","status": "未报送","plan": "暂未备案","date": "2017-01-20","endDate": "2017-04-20","time": "0"},
+		{"name": "吴江发电公司","code": "test00005","district": "吴江区","profession": "发电","status": "未报送","plan": "暂未备案","date": "2017-01-20","endDate": "2017-04-20","time": "0"},
+		{"name": "吴江发电公司","code": "test00005","district": "吴江区","profession": "发电","status": "未报送","plan": "暂未备案","date": "2017-01-20","endDate": "2017-04-20","time": "0"},
+		{"name": "吴江发电公司","code": "test00005","district": "吴江区","profession": "发电","status": "未报送","plan": "暂未备案","date": "2017-01-20","endDate": "2017-04-20","time": "0"}
+	],
+	"confirmTab1":[
+		{"name":"温室气体直报<br>企业报告审核"},
+		{"name":"温室气体直报<br>企业报告审核"}
+	],
+	"confirmTab2":[
+		{"name":"苏州市"},
+		{"name":"吴中区"},
+		{"name":"相城区"},
+		{"name":"高新区"},
+		{"name":"工业园区"},
+		{"name":"吴江区"},
+		{"name":"常熟市"},
+		{"name":"张家港市"},
+		{"name":"昆山市"},
+		{"name":"太仓市"},
+		{"name":"姑苏区"}
+	],
+	"needDo":[
+		{"name":"所有需核查企业","num":"0","unit":"家"},
+		{"name":"所有需复查企业","num":"0","unit":"家"},
+		{"name":"待核查企业","num":"0","unit":"家"},
+		{"name":"待复查企业","num":"0","unit":"家"},
+		{"name":"提出申诉企业","num":"0","unit":"家"}
+	],
+	"poptable4":[
+		{"name":"吴江发电公司","district":"吴江区","profession":"发电","institute":"省工程咨询中心","status":"核查中","institute2":"中国质量认证中心","status2":"待复查","complete":"0.00%","appeal":"50.0%"},
+		{"name":"吴江发电公司","district":"吴江区","profession":"发电","institute":"省工程咨询中心","status":"核查中","institute2":"中国质量认证中心","status2":"待复查","complete":"0.00%","appeal":"50.0%"},
+		{"name":"吴江发电公司","district":"吴江区","profession":"发电","institute":"省工程咨询中心","status":"核查中","institute2":"中国质量认证中心","status2":"待复查","complete":"0.00%","appeal":"50.0%"},
+		{"name":"吴江发电公司","district":"吴江区","profession":"发电","institute":"省工程咨询中心","status":"核查中","institute2":"中国质量认证中心","status2":"待复查","complete":"0.00%","appeal":"50.0%"},
+		{"name":"吴江发电公司","district":"吴江区","profession":"发电","institute":"省工程咨询中心","status":"核查中","institute2":"中国质量认证中心","status2":"待复查","complete":"0.00%","appeal":"50.0%"},
+		{"name":"吴江发电公司","district":"吴江区","profession":"发电","institute":"省工程咨询中心","status":"核查中","institute2":"中国质量认证中心","status2":"待复查","complete":"0.00%","appeal":"50.0%"},
+		{"name":"吴江发电公司","district":"吴江区","profession":"发电","institute":"省工程咨询中心","status":"核查中","institute2":"中国质量认证中心","status2":"待复查","complete":"0.00%","appeal":"50.0%"},
+		{"name":"吴江发电公司","district":"吴江区","profession":"发电","institute":"省工程咨询中心","status":"核查中","institute2":"中国质量认证中心","status2":"待复查","complete":"0.00%","appeal":"50.0%"},
+		{"name":"吴江发电公司","district":"吴江区","profession":"发电","institute":"省工程咨询中心","status":"核查中","institute2":"中国质量认证中心","status2":"待复查","complete":"0.00%","appeal":"50.0%"},
+		{"name":"吴江发电公司","district":"吴江区","profession":"发电","institute":"省工程咨询中心","status":"核查中","institute2":"中国质量认证中心","status2":"待复查","complete":"0.00%","appeal":"50.0%"},
+		{"name":"吴江发电公司","district":"吴江区","profession":"发电","institute":"省工程咨询中心","status":"核查中","institute2":"中国质量认证中心","status2":"待复查","complete":"0.00%","appeal":"50.0%"},
+		{"name":"吴江发电公司","district":"吴江区","profession":"发电","institute":"省工程咨询中心","status":"核查中","institute2":"中国质量认证中心","status2":"待复查","complete":"0.00%","appeal":"50.0%"},
+		{"name":"吴江发电公司","district":"吴江区","profession":"发电","institute":"省工程咨询中心","status":"核查中","institute2":"中国质量认证中心","status2":"待复查","complete":"0.00%","appeal":"50.0%"},
+		{"name":"吴江发电公司","district":"吴江区","profession":"发电","institute":"省工程咨询中心","status":"核查中","institute2":"中国质量认证中心","status2":"待复查","complete":"0.00%","appeal":"50.0%"},
+		{"name":"吴江发电公司","district":"吴江区","profession":"发电","institute":"省工程咨询中心","status":"核查中","institute2":"中国质量认证中心","status2":"待复查","complete":"0.00%","appeal":"50.0%"},
+		{"name":"吴江发电公司","district":"吴江区","profession":"发电","institute":"省工程咨询中心","status":"核查中","institute2":"中国质量认证中心","status2":"待复查","complete":"0.00%","appeal":"50.0%"}
+	],
+	"table6":[
+		{"name":"常熟华新特殊钢有限公司","profession":"发电","district":"吴江区","emissionfactor":"12000.34","num":"5","change1":"1","change2":"2","status":"待审核"},
+		{"name":"常熟华新特殊钢有限公司","profession":"发电","district":"吴江区","emissionfactor":"12000.34","num":"5","change1":"1","change2":"2","status":"已通过"},
+		{"name":"常熟华新特殊钢有限公司","profession":"发电","district":"吴江区","emissionfactor":"12000.34","num":"5","change1":"1","change2":"2","status":"已退回"},
+		{"name":"常熟华新特殊钢有限公司","profession":"发电","district":"吴江区","emissionfactor":"12000.34","num":"5","change1":"1","change2":"2","status":"待审核"},
+		{"name":"常熟华新特殊钢有限公司","profession":"发电","district":"吴江区","emissionfactor":"12000.34","num":"5","change1":"1","change2":"2","status":"已通过"},
+		{"name":"常熟华新特殊钢有限公司","profession":"发电","district":"吴江区","emissionfactor":"12000.34","num":"5","change1":"1","change2":"2","status":"已退回"},
+		{"name":"常熟华新特殊钢有限公司","profession":"发电","district":"吴江区","emissionfactor":"12000.34","num":"5","change1":"1","change2":"2","status":"待审核"},
+		{"name":"常熟华新特殊钢有限公司","profession":"发电","district":"吴江区","emissionfactor":"12000.34","num":"5","change1":"1","change2":"2","status":"已通过"},
+		{"name":"常熟华新特殊钢有限公司","profession":"发电","district":"吴江区","emissionfactor":"12000.34","num":"5","change1":"1","change2":"2","status":"已退回"}
+	],
+	"center1":[
+		{"name":"全市获得配额企业","unit":"(家)","num":"100","rate":"占全省<span class='paddL'>15%</span>"},
+		{"name":"全市获得配额企业","unit":"(万吨CO<sub>2</sub>e)","num":"1000","rate":"占全省<span class='paddL'>15%</span>"}
+	],
+	"center2":[
+		{"name":"全市参与履约企业","unit":"(家)","num":"40","rate":"占全省<span class='paddL'>15%</span>"},
+		{"name":"全市履约完成率","compleRate":"80","rate":"全省履约完成率<span class='paddL'>75%</span>"}
+	],
+	"center3":[
+		{"name":"生产总值","unit":"(亿元)","num":"838.59","rate":"占全省<span class='paddL'>15%</span>"},
+		{"name":"全市交易成交额","unit":"(万元)","num":"500","rate":"市内交易占比<span class='paddL'>15%</span>"},
+		{"name":"全市交易成交次数","unit":"(笔)","num":"50","rate":"市内交易占比<span class='paddL'>15%</span>"}
+	],
+	"tab1":[
+		{"name":"履约完成企业"},
+		{"name":"履约未完成企业"}
+	],
+	"tab2":[
+		{"classify":"电力","num":"12家"},
+		{"classify":"钢铁","num":"10家"},
+		{"classify":"建材","num":"8家"},
+		{"classify":"化工","num":"6家"},
+		{"classify":"石化","num":"6家"},
+		{"classify":"有色","num":"5家"},
+		{"classify":"造纸","num":"4家"},
+		{"classify":"航空","num":"0家"}
+	],
+	"elec":[
+		{"name":"常熟华新特殊钢有限公司","district":"常熟市","date":"6月20日","numS":"100","num1":"80","num2":"20"},
+		{"name":"常熟华新特殊钢有限公司","district":"常熟市","date":"6月20日","numS":"100","num1":"80","num2":"20"},
+		{"name":"常熟华新特殊钢有限公司","district":"常熟市","date":"6月20日","numS":"100","num1":"80","num2":"20"},
+		{"name":"常熟华新特殊钢有限公司","district":"常熟市","date":"6月20日","numS":"100","num1":"80","num2":"20"},
+		{"name":"常熟华新特殊钢有限公司","district":"常熟市","date":"6月20日","numS":"100","num1":"80","num2":"20"},
+		{"name":"常熟华新特殊钢有限公司","district":"常熟市","date":"6月20日","numS":"100","num1":"80","num2":"20"},
+		{"name":"常熟华新特殊钢有限公司","district":"常熟市","date":"6月20日","numS":"100","num1":"80","num2":"20"},
+		{"name":"常熟华新特殊钢有限公司","district":"常熟市","date":"6月20日","numS":"100","num1":"80","num2":"20"},
+		{"name":"常熟华新特殊钢有限公司","district":"常熟市","date":"6月20日","numS":"100","num1":"80","num2":"20"}
+	],
+	"step2Pie":[
+		{"num":"0","rate":"0%","title":"按时报送企业"},
+		{"num":"5","rate":"10%","title":"逾期报送企业"},
+		{"num":"277","rate":"100%","title":"尚未报送企业"}
+	],
+	"step3Pie":[
+		{"num":"0","rate":"0%","title":"已完成核查企业"},
+		{"num":"5","rate":"10%","title":"逾期核查企业"},
+		{"num":"277","rate":"100%","title":"尚未核查企业"}
+	]
+	
+}

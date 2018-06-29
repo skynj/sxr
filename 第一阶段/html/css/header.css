@@ -1,0 +1,119 @@
+@charset "utf-8";
+/* CSS Document */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+body{
+	width: 100%;
+	min-width: 1366px;
+	font-family: '微软雅黑';
+}
+
+#header{
+	height: 55px;
+	background: url('../img/headerBg.png'); 
+	padding-left: 15px;
+	border-top: 2px solid #012661;
+	background-size: 100% 100%;
+}
+.logo-containter{
+	display:table-cell;
+	vertical-align:middle;
+	height: 55px;
+	float: left;
+	padding:8.5px 0;
+}
+#header .logo-containter img{
+	display: inline-block;
+	vertical-align: middle;
+}
+/*主导航样式*/
+.header-nav{
+	float: right;
+}
+.pageList{
+	list-style: none;
+	float: left;
+}
+.pageList li{
+	float: left;
+	height: 55px;
+	line-height: 55px;
+	width: 92px;
+	font-size: 16px;
+	color: #fff;
+	border-right: 1px solid #000204;
+	border-left: 1px solid #1d3e72;
+	text-align: center;
+	cursor: pointer;
+}
+.pageList li a{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	font-size: 16px;
+	color: #fff;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+#header .pageListActive,.pageList li:hover,.baseList li:hover{
+	border-right: 1px solid #3ba4ed;
+	border-left: 1px solid #3ba4ed;
+	background-image: url('../img/activebg.png');
+	background-size: 100% 100%;
+	color:#fff;
+}
+.baseList{
+	list-style: none;
+	float: right;
+}
+.baseList li{
+	float: left;
+	height: 55px;
+	line-height: 20px;
+	width: 63px;
+	font-size: 12px;
+	color: #fff;
+	text-align: center;
+	border-right: 1px solid #000204;
+	border-left: 1px solid #1d3e72;
+	cursor: pointer;
+}
+.baseList .user-nav{
+	width: 75px;
+}
+.baseList li div{
+	width: 25px;
+	height: 25px;
+	margin:6px auto 0;
+}
+.setting{	
+	background: url('../img/setting.png') no-repeat center;
+}
+.remind{
+	background: url('../img/remind.png') no-repeat center;
+}
+.user{
+	background: url('../img/user.png') no-repeat center;	
+}
+.exit{
+	background: url('../img/exit.png') no-repeat center;	
+}
+.news-alert{
+	display: block;
+	width: 15px;
+	height: 15px;
+	line-height: 15px;
+	background-color: #ee4646;
+	border:1px solid #c61717;
+	color: #fff;
+	border-radius: 10px;
+	font-size: 12px;
+	margin-left: 13px;
+}
+
+/*通用类*/
+.pageList .border-left-none{
+	border-left: none;
+}

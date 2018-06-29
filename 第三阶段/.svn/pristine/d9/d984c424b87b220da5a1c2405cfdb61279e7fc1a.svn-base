@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<!-- <title>碳配额</title> -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+    <link type="text/css" rel="stylesheet" href="css/common.css"/>
+    <link type="text/css" rel="stylesheet" href="css/index.css"/>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="js/echarts.min.js"></script>
+    <script type="text/javascript" src="js/myControl.js"></script>
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+<body>
+    <div class="contain" ng-app="threePhase" ng-controller="myControl">
+        <div class="mobile-top">
+            <h1 class="title">碳配额</h1>
+        </div>
+        <div class="mobile-main my-1">
+            <div class="year">
+                <span>2018年</span>
+                <i class="cadelar"></i>
+            </div>
+            <div class="confirm">
+                <i class="warning"></i>
+                <h2>2018年度配额未确认</h2>
+                <p>请尽快登入相应的web系统进行确认</p>
+            </div>
+            <div class="dis">
+                <div class="each-dis">
+                    <i class="dis-icon1"></i>
+                    <span>预分配配额量</span>
+                    <span class="dis-num dis-color1">2000</span>
+                    <span class="dis-unit">吨标准煤</span>
+                </div>
+                <div class="each-dis">
+                    <i class="dis-icon2"></i>
+                    <span>预分配配额量</span>
+                    <span class="dis-num dis-color2">5000</span>
+                    <span class="dis-unit">吨标准煤</span>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-foot">
+            <ul>
+                <li>
+                    <div class="footer-each">
+                        <i class="footer-icon1"></i>
+                        <a href="news.html" class="footerTxt">碳资讯</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="footer-each">
+                        <i class="footer-icon2"></i>
+                        <a href="exchange.html" class="footerTxt">碳交易</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="footer-each">
+                        <i class="footer-icon3"></i>
+                        <a href="knowledge.html" class="footerTxt">碳知识</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="footer-each">
+                        <i class="footer-icon4"></i>
+                        <a href="foot.html" class="footerTxt">碳足迹</a>
+                    </div>
+                </li>
+                <li class="active">
+                    <div class="footer-each">
+                        <i class="footer-icon5"></i>
+                        <a href="my.html" class="footerTxt">我的</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

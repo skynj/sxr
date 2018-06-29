@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<!-- <title>碳足迹-1</title> -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalabel=no"> -->
+    <link type="text/css" rel="stylesheet" href="css/common.css"/>
+    <link type="text/css" rel="stylesheet" href="css/index.css"/>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="js/echarts.min.js"></script>
+    <script type="text/javascript" src="js/myControl.js"></script>
+    <script type="text/javascript" src="js/charts.js"></script>
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+<body>
+    <div class="contain exchange-page" ng-app="threePhase" ng-controller="myControl">
+        <div class="mobile-top">
+            <div class="back"><a class="back-icon" href="foot.html" /></a>返回</div>
+            <h1 class="title">碳足迹计算器</h1>
+        </div>
+        <div class="mobile-main calculator">
+            <form action="" method="post">
+                <div class="life">
+                    <h1>生活习惯（单选）</h1>
+                    <div>
+                        <label for="tv">您今天看电视时长</label>
+                        <div class="radio-width">
+                            <div class="radio-style">
+                                <input type="radio" id="tv-option1" name="tv"><label>&ge;1h</label>
+                            </div>
+                        </div>
+                        <div class="radio-width">
+                            <div class="radio-style">
+                                <input type="radio" id="tv-option2" name="tv"><label>&lt;1h</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="kt">您今天空调使用时长</label>
+                        <div class="radio-width">
+                            <div class="radio-style">
+                                <input type="radio" id="kt-option1" name="kt"><label>&ge;3h</label>
+                            </div>
+                        </div>
+                        <div class="radio-width">
+                            <div class="radio-style">
+                                <input type="radio" id="kt-option2" name="kt"><label>&lt;3h</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="ip">您今天手机使用时长</label>
+                        <div class="radio-width">
+                            <div class="radio-style">
+                                <input type="radio" id="ip-option1" name="ip"><label>&ge;3h</label>
+                            </div>
+                        </div>
+                        <div class="radio-width">
+                            <div class="radio-style">
+                                <input type="radio" id="ip-option2" name="ip"><label>&lt;3h</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="it">您今天笔记本电脑时长</label>
+                        <div class="radio-width">
+                            <div class="radio-style">
+                                <input type="radio" id="it-option1" name="it"><label>&ge;3h</label>
+                            </div>
+                        </div>
+                        <div class="radio-width">
+                            <div class="radio-style">
+                                <input type="radio" id="it-option2" name="it"><label>&lt;3h</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="food">
+                    <h1>餐饮习惯（单选）</h1>
+                    <div>
+                        <label for="cook">您今天下厨做饭了没</label>
+                        <div class="radio-width">
+                            <div class="radio-style">
+                                <input type="radio" id="cook-option1" name="cook"><label>Yes</label>
+                            </div>
+                        </div>
+                        <div class="radio-width">
+                            <div class="radio-style">
+                                <input type="radio" id="cook-option2" name="cook"><label>No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="food">您今天吃了积分便当</label>
+                        <div class="radio-width">
+                            <div class="radio-style">
+                                <input type="radio" id="food-option1" name="food"><label>&ge;2</label>
+                            </div>
+                        </div>
+                        <div class="radio-width">
+                            <div class="radio-style">
+                                <input type="radio" id="food-option2" name="food"><label>&lt;2</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="water">您今天喝了几杯水</label>
+                        <div class="radio-width">
+                            <div class="radio-style">
+                                <input type="radio" id="water-option1" name="water"><label>&ge;2</label>
+                            </div>
+                        </div>
+                        <div class="radio-width">
+                            <div class="radio-style">
+                                <input type="radio" id="water-option2" name="water"><label>&lt;2</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="traffic">
+                    <h1>交通方式（多选）</h1>
+                    <div>
+                        <div class="radio-width">
+                            <div class="radio-style">
+                                <input type="checkbox" value=""><label>公共交通</label>
+                            </div>
+                        </div>
+                        <label for="name"><input type="text">小时</label>
+                    </div>
+                    <div>
+                        <div class="radio-width">
+                            <div class="radio-style">
+                                <input type="checkbox" value=""><label>汽车</label>
+                            </div>
+                        </div>
+                        <label for="name"><input type="text">小时</label>
+                    </div>
+                    <div>
+                        <div class="radio-width">
+                            <div class="radio-style">
+                                <input type="checkbox" value=""><label>机车</label>
+                            </div>
+                        </div>
+                        <label for="name"><input type="text">小时</label>
+                    </div>
+                    <div>
+                        <div class="radio-width">
+                            <div class="radio-style">
+                                <input type="checkbox" value=""><label>电动车</label>
+                            </div>
+                        </div>
+                        <label for="name"><input type="text">小时</label>
+                    </div>
+                </div>
+                <div class="submit"><input type="button" value="提交"></div>
+            </form>
+        </div>
+        <div class="mobile-foot">
+            <ul>
+                <li>
+                    <div class="footer-each">
+                        <i class="footer-icon1"></i>
+                        <a href="news.html" class="footerTxt">碳资讯</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="footer-each">
+                        <i class="footer-icon2"></i>
+                        <a href="exchange.html" class="footerTxt">碳交易</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="footer-each">
+                        <i class="footer-icon3"></i>
+                        <a href="knowledge.html" class="footerTxt">碳知识</a>
+                    </div>
+                </li>
+                <li class="active">
+                    <div class="footer-each">
+                        <i class="footer-icon4"></i>
+                        <a href="foot.html" class="footerTxt">碳足迹</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="footer-each">
+                        <i class="footer-icon5"></i>
+                        <a href="my.html" class="footerTxt">我的</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

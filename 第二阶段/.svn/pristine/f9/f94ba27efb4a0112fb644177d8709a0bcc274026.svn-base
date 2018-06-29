@@ -1,0 +1,172 @@
+<!Doctype html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>镇江绿色交通综合管理服务平台云图</title>
+	<link type="text/css" rel="stylesheet" href="css/header.css"/>
+	<link type="text/css" rel="stylesheet" href="css/index.css"/>
+	<link type="text/css" rel="stylesheet" href="css/cloud.css"/>
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/echarts.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/effect.js"></script>
+	<script type="text/javascript" src="js/perfect-scrollbar.jquery.js"></script>
+	<link type="text/css" rel="stylesheet" href="css/perfect-scrollbar.min.css"/>
+	<script type="text/javascript" src="js/bigScreen.js"></script>
+	<script src="https://cdn.bootcss.com/angular.js/1.5.0-beta.0/angular-sanitize.min.js"></script>
+
+
+</head>
+<body>
+	<div class="cloud-contain" ng-app="secondPhase" ng-controller="myControl">
+		<div class="year-select">
+			<lable>年份选择</lable>
+			<select>
+				<option>2015年</option>
+				<option>2016年</option>
+				<option>2017年</option>
+				<option>2018年</option>
+			</select>
+		</div>
+		<div class="cloud-left">
+			<div class="tendency tendencyHeight1">
+				<div class="cloud-title-bg">
+					<h2 class="cloud-title">能耗与碳排放走势</h2>
+				</div>
+				<div class="cloud-charts1">
+					
+				</div>
+			</div>
+			<div class="tendency tendencyHeight2">
+				<div class="cloud-title-bg">
+					<h2 class="cloud-title">企业能耗分析</h2>
+				</div>
+				<div class="cloud-charts2">
+					<div id="cloud-bing">
+						<div class="cloud-bingL">
+							<p class="enterprise">覆盖企业</p>
+							<p class="enterprise-data"><span>48</span>家</p>
+							<p class="enterprise-add">同比增长<span>2.2%</span></p>
+						</div>
+						<div class="cloud-bingR">
+							
+						</div>
+					</div>
+					<div id="cloud-bar1"></div>
+				</div>
+			</div>
+		</div>
+		<div class="cloud-center">
+			<div class="green-icon"></div>
+			<div class="center-bottom">
+				<div class="progress-bar">
+					<div class="each-progressBar" ng-repeat="item in progressBar" on-finish>
+						<h3>{{item.title}}</h3>
+						<div ng-class="'svgView'+($index+1)"></div>
+						<p ng-class="'pLinear'+($index+1)">{{item.num}}</p>
+						<p>{{item.unit}}</p>
+					</div>					
+				</div>
+				<div class="center-infor">
+					<div class="updata">
+						<h3>更新时间</h3>
+						<p>{{updateYear}}</p>
+						<p>{{updataTime}}</p>
+					</div>
+					<div class="each-carInfor" ng-repeat="item in carInfor">
+						<h3>{{item.title}}</h3>
+						<p><span class="car-num">{{item.num}}</span><span class="car-unit">{{item.unit}}</span></p>
+					</div>
+				</div>
+				<div class="bottom-infor">
+					<div class="each-carInfor" ng-repeat="item in bottomInfor">
+						<h3>{{item.title}}</h3>
+						<p><span class="car-num">{{item.num}}</span><span class="car-unit" ng-bind-html="item.unit"></span></p>
+					</div>
+				</div>				
+			</div>
+			<div class="map-legend">
+				<div>
+					<img src="img/map-legend1.png">
+					<span>公路货运</span>
+				</div>
+				<div>
+					<img src="img/map-legend2.png">
+					<span>公路客运</span>
+				</div>
+				<div>
+					<img src="img/map-legend3.png">
+					<span>城市公交</span>
+				</div>
+				<div>
+					<img src="img/map-legend4.png">
+					<span>港口生产</span>
+				</div>
+			</div>
+			<div class="pop-up">
+				<img src="img/popup-close.png" class="popup-close">
+				<div class="popup-title">
+					<span class="license">鲁B 8Z0C3</span>
+					<span class="time">2017年06月01日 12:04:25</span>
+				</div>
+				<div class="car-infor-left">
+					<p><span>企业名称：</span>中交集团</p>
+					<p><span>所属行业：</span>公路货运</p>
+					<p><span>实时速度：</span>30Km/h</p>
+					<p><span>位置：</span>北纬 36°&nbsp;&nbsp;东经 120°</p> 
+					<!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+				</div>
+				<div class="car-infor-right">
+					<p><span>实时油耗：</span>2g/s</p>
+					<p><span>G-BOS数据监测状态：</span>正常</p>
+					<p><span>本次行程累计时长：</span>20min</p>
+					<p><span>本次行程累记里程：</span>30Km</p>
+				</div>
+				<div class="carInfor-lineCharts"></div>
+			</div>
+		</div>
+		<div class="cloud-right">
+			<div class="tendency tendencyHeight5">
+				<div class="cloud-title-bg">
+					<h2 class="cloud-title">交通运输节能减排项目</h2>
+				</div>
+				<div class="cloud-charts1">
+					<div class="bar2-infor">
+						<div ng-class="$last?'barInfor-last':'each-barInfor'" ng-repeat="x in barInfor">
+							<h3>{{x.h3}}</h3>
+							<p><span>{{x.data}}</span>{{x.unit}}</p>
+						</div>
+					</div>
+					<div class="bar2"></div>
+				</div>
+			</div>
+			<div class="tendency tendencyHeight6">
+				<div class="cloud-title-bg">
+					<h2 class="cloud-title">交通运输行业分析</h2>
+				</div>
+				<div class="cloud-charts2" style="padding:25px 0 0 0;">
+					<div class="bubble-top-legend1">
+						<img src="img/bubble-legend1.png"><span>综合能耗（吨标煤）</span>
+						<img src="img/bubble-legend2.png"><span>温室气体排放量（吨CO2e）</span>
+					</div>
+					<div class="bubble-top-legend2">
+						<img src="img/bubble-legend3.png"><span>碳排放强度（吨CO2e/吨标煤）</span>
+					</div>
+					<div class="bubble">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+	<!-- <script type="text/javascript" src="js/try.js"></script> -->
+
+	<script type="text/javascript" src="js/try2.js"></script>
+
+	<!-- <script>
+		var id=$('.trysvg').attr("id");
+		console.log(id)
+	</script> -->
+</html>

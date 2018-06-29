@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<!-- <title>碳交易</title> -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+    <link type="text/css" rel="stylesheet" href="css/common.css"/>
+    <link type="text/css" rel="stylesheet" href="css/index.css"/>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="js/echarts.min.js"></script>
+    <script type="text/javascript" src="js/myControl.js"></script>
+    
+    <script type="text/javascript" src="js/effect.js"></script>
+    <script type="text/javascript" src="js/charts.js"></script>
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+<body>
+    <div class="contain exchange-page" ng-app="threePhase" ng-controller="myControl">
+        <div class="mobile-top">
+            <div class="back"><a class="back-icon" href="javascript:void(0)" /></a>返回</div>
+            <h1 class="title">碳交易</h1>
+        </div>
+        <div class="mobile-main">
+            <ul class="exchange-tab">
+                <li class="exchange-tabAct"><span>成交价行情</sapn></li>
+                <li><span>成交量行情</span></li>
+                <div class="clear"></div>
+            </ul>
+            <div class="grey-line2"></div>
+            <div class="bargain-price">
+                <div class="price"><span>成交价</span><span>单位：元</span></div>
+                <div id="line"></div>
+                <div class="line-border"></div>
+                <div class="padding30">
+                    <div class="today"><span>2018-04-24</span>星期二</div>
+                    <table class="t1" border="0" cellpadding="0" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th class="firstLine">区域</th>
+                                <th class="secondLine">成交价(元)</th>
+                                <th class="thirdLine">成交量(吨)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in bargainPrice">
+                                <td class="firstLine">{{item.city}}</td>
+                                <td class="secondLine">{{item.price}}</td>
+                                <td class="thirdLine">{{item.quantity}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="bargain-quantity">
+                <div class="price"><span>成交量</span></div>
+                <div id="bar"></div>
+                <div class="line-border"></div>
+                <div class="padding30">
+                <div class="today"><span>2018-04-24</span>星期二</div>
+                <table class="t1" border="0" cellpadding="0" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th class="firstLine">区域</th>
+                            <th class="secondLine">成交量</th>
+                            <th class="thirdLine">成交额</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="item in bargainQuantity">
+                            <td class="firstLine">{{item.city}}</td>
+                            <td class="secondLine color1">{{item.quantity}}</td>
+                            <td class="thirdLine color2">{{item.price}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-foot">
+            <ul>
+                <li>
+                    <div class="footer-each">
+                        <i class="footer-icon1"></i>
+                        <a href="news.html" class="footerTxt">碳资讯</a>
+                    </div>
+                </li>
+                <li class="active">
+                    <div class="footer-each">
+                        <i class="footer-icon2"></i>
+                        <a href="exchange.html" class="footerTxt">碳交易</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="footer-each">
+                        <i class="footer-icon3"></i>
+                        <a href="knowledge.html" class="footerTxt">碳知识</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="footer-each">
+                        <i class="footer-icon4"></i>
+                        <a href="foot.html" class="footerTxt">碳足迹</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="footer-each">
+                        <i class="footer-icon5"></i>
+                        <a href="my.html" class="footerTxt">我的</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,439 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face {
+	font-family:GOTHICB;
+	src: url('../fonts/GOTHICB.TTF');
+}
+html,body{
+	height: 100%;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+    font-family: '微软雅黑';
+}
+.cloud-contain{
+	height: 100%;
+	background: url('../img/cloud-bg2.png') no-repeat;
+	background-size: 100% 100%;
+	min-width: 1920px;
+	min-height: 1080px;
+	padding:42px 27px 30px;
+}
+.year-select{
+	display: inline-block;
+	position: absolute;
+	left: 50%;
+	margin-left: -63.5px;
+	top:102px;
+	z-index: 5;
+}
+.year-select select,.year-select lable{
+	font-size: 16px;
+	background-image: -webkit-linear-gradient(top, #c5e2ff,#80c0ff);
+    -webkit-background-clip: text; /*必需加前缀 -webkit- 才支持这个text值 */
+    -webkit-text-fill-color: transparent; /*text-fill-color会覆盖color所定义的字体颜色： */
+}
+.year-select select{
+	border:none;
+	outline: none;
+}
+.cloud-left{
+	width: 29.5%;
+	height: 100%;
+	float: left;
+}
+.tendency{
+	position: relative;
+}
+.tendencyHeight1{
+	height: 42%;	
+}
+.cloud-title-bg{
+	background: url('../img/cloud-title-bg.png') no-repeat;
+	background-size: 100% 100%;
+	height: 76px;
+}
+.cloud-title{
+	background-image: -webkit-linear-gradient(top, #ffffff,#b8dcff);
+    -webkit-background-clip: text; /*必需加前缀 -webkit- 才支持这个text值 */
+    -webkit-text-fill-color: transparent; /*text-fill-color会覆盖color所定义的字体颜色： */
+	font-size:24px;
+	text-align: center;
+	padding-top: 28px;
+}
+.cloud-charts1,.cloud-charts2{
+	background: url('../img/cloud-charts-bg.png') no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	top:82px;
+	bottom:0;
+	left:-11px;
+	right: -12px;
+}
+.cloud-charts2{
+	top:102px;
+}
+.tendencyHeight2{
+	height: 58%;	
+	padding-top: 20px;
+}
+
+.cloud-center{
+	width: 41%;
+	height: 100%;
+	float: left;
+	position: relative;
+}
+.cloud-right{
+	width: 29.5%;
+	height: 100%;
+	float: left;
+}
+.tendencyHeight5{
+	height: 50.5%;	
+}
+.tendencyHeight6{
+	height: 49.5%;	
+	padding-top: 20px;
+}
+.cloud-center{
+	position: relative;
+}
+.center-bottom{
+	background: url('../img/tendency4bg.png') no-repeat;
+	background-size: 100% 100%;
+	height: 392px;
+	width: 563px;
+	position: absolute;
+	bottom:52px;
+	left:50%;
+	margin-left: -281.5px;
+}
+.bubble-top-legend1,.bubble-top-legend2{
+	color: #009cff;
+	font-size: 14px;
+	text-align: center;
+	padding-bottom: 10px;
+}
+.bubble-top-legend1 img{
+	position: relative;
+	top:-4px;
+	margin-right: 10px;
+}
+.bubble-top-legend2 img{
+	position: relative;
+	top:1.5px;
+	margin-right: 10px;
+}
+.bubble{
+	position: absolute;
+	bottom:30px;
+	top:80px;
+	left: 0;
+	right: 0;
+	/*border:1px solid #fff;*/
+}
+#cloud-bing{
+	width: 90%;
+	margin: 9px auto 0;
+	height: 38.5%;
+	padding: 4px 0 0 20px;  
+	background: url('../img/pie-bg.png') no-repeat;
+	background-size: 100%;
+}
+.cloud-bingL{
+	float: left;
+	width: 19.8%;
+}
+.cloud-bingR{
+	float: none;
+	overflow: hidden;
+	margin-left: 19.8%;
+	margin-top: 5px;
+	height: 80%;
+}
+.enterprise{
+	color: #ffffff;
+	font-size: 20px;
+	margin:30px 0 13px 0;
+}
+.enterprise-data,.enterprise-add{
+	color: #009cff;
+	font-size: 14px;
+	margin-bottom: 6px;
+}
+.enterprise-data span{
+	color: #00ffea;
+	font-size: 36px;
+	font-family:GOTHICB;
+	margin-right: 15px;
+}
+.enterprise-add span{
+	color: #00ffea;
+	font-size: 14px;
+	font-family:GOTHICB;
+	margin-left: 9px;
+}
+#cloud-bar1{
+	height: 58.5%;
+}
+.bar2-infor{
+	height: 26.4%;
+	background: rgba(3,21,56,0.3);
+	width: 88%;
+	margin:19px auto 0;
+	border-radius: 3px;
+	display: flex;
+	justify-content: space-between;
+	padding:18px 0;
+}
+.each-barInfor{
+	flex: 1;
+	height: 100%;
+	border-right:1px dashed #0f3f6c;
+}
+.barInfor-last{
+	flex: 1;
+	height: 100%;
+	border:none;
+}
+.bar2-infor h3{
+	color: #ffffff;
+	font-size: 20px;
+	text-align: center;
+	margin-bottom: 7px;
+}
+.bar2-infor p{
+	color: #009cff;
+	font-size: 14px;
+	text-align: center;
+}
+.bar2-infor p span{
+	color: #00ffea;
+	font-size: 36px;
+	text-align: center;
+	font-family:GOTHICB;
+	margin-right:11px;
+}
+.bar2{
+	height: 73.6%;
+}
+.green-icon{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top:204px;
+	left:255px;
+	cursor: pointer; 
+}
+.pop-up{
+	width: 472px;
+	height: 344px;
+	position: absolute;
+	top:213px;
+	left:178.5px;
+	background: url('../img/popUp-bg.png');
+	padding:12px 25px 28px 27px;
+}
+.popup-close{
+	position: absolute;
+	right: -24px;
+	top:18px;
+	cursor: pointer;
+}
+.popup-title{
+	border-bottom: 1px solid #1b3670;
+	height: 53px;
+	line-height: 53px;
+}
+.license{
+	float: left;
+	color: #ffffff;
+	font-size:19.69px;
+}
+.time{
+	float: right;
+	font-size: 16px;
+	color:#009cff; 
+}
+.car-infor{
+	
+}
+.car-infor-left{
+	float: left;
+	color: #ffffff;
+	font-size: 14px;
+}
+.car-infor-left p,.car-infor-right p{
+	margin-top:10px;
+}
+.car-infor-left span{
+	color: #009cff;
+	font-size: 14px;
+	display: inline-block;
+	width: 70px;
+	text-align: right;
+}
+/*.car-infor-left p:last-child span{
+	text-align: justify;
+	text-align-last: justify;
+}*/
+.car-infor-right{
+	float: right;
+	color: #ffffff;
+	font-size: 14px;
+}
+.car-infor-right span{
+	color: #009cff;
+	font-size: 14px;
+	display: inline-block;
+	width: 143px;
+	text-align: right;
+}
+.carInfor-lineCharts{
+	clear:both;
+	position: absolute;
+	bottom: 28px;
+	top:181px;
+	left:27px;
+	right: 25px;
+}
+.progress-bar{
+	height: 165px;
+	display: flex;
+	justify-content:space-between;
+	padding:25px 33px 10px 33px;
+}
+.center-infor{
+	height: 119px;
+	padding:26px 33px 10px 33px;
+	display: flex;
+	justify-content:space-between;
+}
+.center-infor div{
+	padding-right: 10px;
+	flex: 1;
+	background: url('../img/tendency-div-bg.png') no-repeat;
+}
+.center-infor div:last-child{
+	padding-right: 0;
+}
+.center-infor div h3,.each-carInfor h3{
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+	padding-top: 12px;
+}
+.updata p{
+	color: #009cff;
+	font-family:GOTHICB;
+	text-align: center;
+	font-size: 14px;
+}
+.updata h3 + p{
+	padding-top:5px;
+}
+.updata p:last-child{
+	font-size: 16px;
+}
+.each-carInfor p{
+	text-align:center;
+	padding-top:9px; 
+}
+.car-num{
+	color: #009cff;
+	font-family:GOTHICB;
+	font-size: 22px;
+	margin-right: 14px;
+}
+.car-unit{
+	color: #009cff;
+	font-family:GOTHICB;
+	font-size: 14px;
+}
+.bottom-infor{
+	height: 84px;
+	padding:0 33px;
+	display: flex;
+	justify-content:space-between;
+}
+.bottom-infor div:first-of-type{
+	width: 126.75px;
+	padding-right: 10px;
+	background: url('../img/tendency-div-bg.png') no-repeat;
+}
+.bottom-infor div:not(:first-of-type){
+	padding-right: 10px;
+	flex:1;
+	background: url('../img/tendency-div-bg.png') no-repeat;
+	background-size: 95% 100%;
+}
+.bottom-infor div:last-child{
+	padding-right: 0;
+	background-size: 100% 100%;
+}
+.map-legend{
+	position: absolute;
+	bottom: 7px;
+	left:50%;
+	margin-left: -262.6px;
+}
+.map-legend div{
+	display: inline-block;
+}
+.map-legend div img{
+	margin-right: 15px;
+	position: relative;
+	top:10px;
+}
+.map-legend div span{
+	color: #ffffff;
+	font-size: 15px;
+	margin-right: 32px;
+}
+.map-legend div:last-child span{
+	margin-right: 0;
+}
+.each-progressBar{
+	flex:1;
+}
+.each-progressBar h3{
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+}
+.each-progressBar div+p{
+	font-size: 24px;
+	text-align: center;
+	font-family:GOTHICB;
+	position: relative;
+	top:-35px;
+}
+.each-progressBar p:last-child{
+	color: #398fe5;
+	font-size: 14px;
+	text-align: center;
+	position: relative;
+	top:-32px;
+}
+.pLinear1{
+	background-image: -webkit-linear-gradient(top, #fabe00,#ff7b00);
+    -webkit-background-clip: text; /*必需加前缀 -webkit- 才支持这个text值 */
+    -webkit-text-fill-color: transparent; /*text-fill-color会覆盖color所定义的字体颜色： */
+}
+.pLinear2{
+	background-image: -webkit-linear-gradient(top, #ff7259,#e8352b);
+    -webkit-background-clip: text; /*必需加前缀 -webkit- 才支持这个text值 */
+    -webkit-text-fill-color: transparent; /*text-fill-color会覆盖color所定义的字体颜色： */
+}
+.pLinear3{
+	background-image: -webkit-linear-gradient(top, #52feb6,#45ff73);
+    -webkit-background-clip: text; /*必需加前缀 -webkit- 才支持这个text值 */
+    -webkit-text-fill-color: transparent; /*text-fill-color会覆盖color所定义的字体颜色： */
+}
+.pLinear4{
+	background-image: -webkit-linear-gradient(top, #00baff,#008cff);
+    -webkit-background-clip: text; /*必需加前缀 -webkit- 才支持这个text值 */
+    -webkit-text-fill-color: transparent; /*text-fill-color会覆盖color所定义的字体颜色： */
+}

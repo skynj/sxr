@@ -1,0 +1,85 @@
+.clear{
+    clear: both;
+}
+.f_left{
+    float: left;
+}
+.f_right{
+    float: right;
+}
+img{
+    pointer-events: none;
+}
+.container{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin: 0 auto;
+    background: #f5f5f5;
+}
+.container_main{
+    position: absolute;
+    top: 0;
+    left:0;
+    right:0;
+    bottom: 1.6rem;
+    overflow: auto;
+}
+.mainNav{
+    position: absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    height: 1.6rem;
+    border-top: 1px solid #b1b1b1;
+    background: #fff;
+}
+.mainNav_item{
+    width: 33.33%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    font-size: 0.32rem;
+    color: #b1b1b1;
+}
+.mainNav_img{
+    display: inline-block;
+    margin-top: 0.32rem;
+    width: 0.56rem;
+    height:0.56rem;
+    background-size: 100% 100%!important;
+}
+.mainNav_item_1 .mainNav_img{
+    background: url("../images/nav_home.png") no-repeat center;
+}
+.mainNav_item_2 .mainNav_img{
+    background: url("../images/nav_seekhelp.png") no-repeat center;
+}
+.mainNav_item_3 .mainNav_img{
+    background: url("../images/nav_mine.png") no-repeat center;
+}
+.mainNav_txt{
+    margin-top: 0.15rem;
+}
+.mainNav_item:first-child{
+    box-sizing: border-box;
+    padding-right: 0.3rem;
+}
+.mainNav_item:last-child{
+    box-sizing: border-box;
+    padding-left: 0.3rem;
+}
+.mainNav_item.active{
+    color: #0496df;
+}
+.mainNav_item_1.active .mainNav_img{
+    background: url("../images/nav_home_active.png") no-repeat center;
+}
+.mainNav_item_2.active .mainNav_img{
+    background: url("../images/nav_seekhelp_active.png") no-repeat center;
+}
+.mainNav_item_3.active .mainNav_img{
+    background: url("../images/nav_mine_active.png") no-repeat center;
+}

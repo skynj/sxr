@@ -1,0 +1,47 @@
+$(function(){
+	$('.search2-icon').on('touchstart',function(){
+		$(this).siblings().val('');
+	});
+	// exchange();
+	$('.exchange-tab>li:nth-child(2)').on('touchstart',function(){
+		$(this).addClass('exchange-tabAct');
+		$(this).prev().removeClass('exchange-tabAct');
+		$('.bargain-price').hide();
+		$('.bargain-quantity').show();		
+		bar();
+	});
+	// exchange();
+	$('.exchange-tab>li:first-child').on('touchstart',function(){
+		$(this).addClass('exchange-tabAct');
+		$(this).next().removeClass('exchange-tabAct');
+		$('.bargain-price').show();
+		$('.bargain-quantity').hide();
+		line();
+	});
+
+    $.ajax({
+		url: "http://192.168.0.38:6001/carbonPro",
+		type: "POST",
+		data : {"pid":"1"},
+		dataType: "json",
+		success:function(data){
+			console.log(data)
+		},
+		error:function(er){
+			console.log('error');
+		}
+	});
+
+    
+
+	function loading(){
+		var loadingNum = parseInt($('.loading-num').text());
+		if(loadingNum<100){
+			$('.loading-num').html(loadingNum + 5);
+		}else{
+			$('.loading-num').html(100);
+		}
+	}
+	var myLoad=setInterval(function(){loading()},1000);
+})
+

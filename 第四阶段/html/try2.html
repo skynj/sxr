@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .TabNav {
+            height: 131px;
+            position: relative;
+            margin-left: 100px;
+            margin-top: 100px;
+        }
+
+        .TabNav ul li {
+            float: left;
+            background: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#ededed));
+            border: 1px solid #ccc;
+            padding: 5px 0;
+            width: 100px;
+            text-align: center;
+            margin-left: -1px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .TabCon {
+            position: absolute;
+            left: -1px;
+            top: 30px;
+            border: 1px solid #ccc;
+            border-top: none;
+            width: 403px;
+            height: 100px;
+        }
+
+        .TabNav ul li.active {
+            background: #FFFFFF;
+            border-bottom: none;
+        }
+
+        .TabNav ul li.active1 {
+            background: #FFFFFF;
+        }
+
+        .box {
+            width: 1000px;
+        }
+
+        .change {
+            background: cyan;
+            padding: 5px 10px;
+            width: 100px;
+            height: 40px;
+            float: left;
+            border: 1px solid #ddd;
+        }
+
+        .changed {
+            background-color: cadetblue;
+            border: 1px solid red;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-ui-router.min.js"></script>
+</head>
+
+<body>
+    <div class="TabNav" ng-controller='tabcontroller'>
+        <div>
+            <ul ng-init='selected=0'>
+                <li ng-class='{active:selected==$index}' ng-click='show($index)' ng-repeat='item in title'>{{item.name}}</li>
+            </ul>
+            <div class="TabCon">
+                <div ng-show='selected==$index' ng-repeat='item in vm'>{{item.con}}</div>
+            </div>
+        </div>
+        <div class="box">
+            <div ng-init='selected1=0'>
+                <span class="change" ng-class='{changed:selected1==$index}' ng-click='show1($index)' ng-repeat='item in title'>{{item.name}}</li>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    var app = angular.module('app', []);
+    app.controller('tabcontroller', function ($scope) {
+        $scope.title = [{ 'name': 'tab1' }, { 'name': 'tab2' }, { 'name': 'tab3' }, { 'name': 'tab4' }]
+        $scope.vm = [
+            { "list": "tab1", "con": "aaaaaaaaaaaaaaaaa" },
+            { "list": "tab2", "con": "bbbbbbbbbbbbbbbbb" },
+            { "list": "tab3", "con": "ccccccccccccccccc" },
+            { "list": "tab4", "con": "ddddddddddddddddd" }
+        ];
+        //tab选项
+        var selected = $scope.selected;
+        $scope.show = function (index) {
+            $scope.selected = index;
+        };
+        //按钮选中选项
+        var selected1 = $scope.selected1;
+        $scope.show1 = function (index) {
+            $scope.selected1 = index;
+        };
+    });
+</script>
+
+</html>

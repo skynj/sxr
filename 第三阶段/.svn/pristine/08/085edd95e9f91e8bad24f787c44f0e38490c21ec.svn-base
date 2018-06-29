@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>碳资讯</title>
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+    <link type="text/css" rel="stylesheet" href="css/common.css"/>
+    <link type="text/css" rel="stylesheet" href="css/index.css"/>
+    <link type="text/css" rel="stylesheet" href="css/flexible.css"/>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="js/echarts.min.js"></script>
+    <script type="text/javascript" src="js/myControl.js"></script>
+    <script type="text/javascript" src="js/flexible.js"></script>
+    <!-- <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script> -->
+<body>
+    <div class="contain" ng-app="threePhase" ng-controller="myControl">
+        <div class="mobile-top">
+            <h1 class="title">碳资讯</h1>
+        </div>
+        <div class="mobile-main">
+            <div class="news-title">
+                <h1>应对气候变化<span class=""></span>引领低碳发展</h1>
+            </div>
+            <div class="grey-line"></div>
+            <div class="news-contents">
+                <div class="content-withImg" ng-repeat="item in data1 track by $index" id="{{$index+1}}">
+                    <figure>
+                        <div class="img-border">
+                            <img src="http://192.168.0.38:6001/static/images/{{item.coverImg}}" />
+                        </div>                                           
+                       <div class="img-content">
+                           <p class="img-title">{{item.title}}</p>
+                           <p class="p-margin"><span class="news-time">{{item.date}}</span><a href="withImgNews.html" class="tringle"></a></p>
+                       </div>
+                       <div class="clear"></div>
+                    </figure>
+                </div>
+                <div class="content-withoutImg" ng-repeat="item in data2 track by $index" id="{{$index+6}}">
+                    <p class="withoutImg-title">{{item.title}}</p>
+                    <p class="p-margin"><span class="news-time">{{item.date}}</span><a href="withoutImgNews.html" class="tringle"></a></p>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-foot">
+            <ul>
+                <li class="active">
+                    <div class="footer-each">
+                        <i class="footer-icon1"></i>
+                        <a href="news.html" class="footerTxt">碳资讯</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="footer-each">
+                        <i class="footer-icon2"></i>
+                        <a href="exchange.html" class="footerTxt">碳交易</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="footer-each">
+                        <i class="footer-icon3"></i>
+                        <a href="knowledge.html" class="footerTxt">碳知识</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="footer-each">
+                        <i class="footer-icon4"></i>
+                        <a href="foot.html" class="footerTxt">碳足迹</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="footer-each">
+                        <i class="footer-icon5"></i>
+                        <a href="my.html" class="footerTxt">我的</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

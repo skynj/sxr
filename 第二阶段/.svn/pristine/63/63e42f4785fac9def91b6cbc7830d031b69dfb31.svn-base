@@ -1,0 +1,96 @@
+<!Doctype html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>决策支持</title>
+	<link type="text/css" rel="stylesheet" href="css/header.css"/>
+	<link type="text/css" rel="stylesheet" href="css/index.css"/>
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/echarts.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/effect.js"></script>
+	<script type="text/javascript" src="js/lineCharts.js"></script>
+	<script src="https://cdn.bootcss.com/angular.js/1.5.0-beta.0/angular-sanitize.min.js"></script>
+</head>
+<body>
+	<div class="contain">
+		<div class="header">
+			<div class="logo-containter"><img src="img/title2.png" alt="title2" class="pointer"></div>
+			<div class="header-nav">
+				<ul class="pageList decision-width">
+					<li><a href="javascript:void(0)">综合分析</a></li>
+					<li><a href="javascript:void(0)">综合报告</a></li>
+					<li class="pageActive"><a href="javascript:void(0)">趋势预测</a></li>
+				</ul>
+				<ul class="baseList">
+					<li class="news-nav">
+						<a href="javascript:void(0)">
+							<div class="remind"><span class="news-alert">9</span></div>
+							<span>消息</span>
+						</a>
+					</li>
+					<li class="user-nav">
+						<a href="javascript:void(0)">
+							<div class="user"></div>
+							<span>个人中心</span>
+						</a>
+					</li>
+					<li class="exit-nav">
+						<a href="javascript:void(0)">
+							<div class="exit"></div>
+							<span>退出</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="decision-main" ng-app="secondPhase" ng-controller="myControl">
+			<div class="decision-top">
+				<div class="each-scene" ng-repeat="y in scene">
+					<div>
+						<h3>{{y.h3}}</h3>
+						<p class="emission">{{y.theme}}</p>
+						<p ng-class="'emission-data data-color'+($index+1)">{{y.data}}</p>
+						<p class="emission-unit" ng-bind-html="y.unit"></p>
+					</div>
+				</div>
+			</div>
+			<div class="decision-bottom">
+				<h2>不同情景下碳排放总量变化趋势对比</h2>
+				<div class="decision-charts">									
+					<div id="line">
+						
+					</div>
+					<div class="bar-line-legend">
+						<div class="decision-border"></div>
+							<div class="legend-content3">
+								<div class="right22">
+									<img src="img/legend1.png" alt="legend1">
+									<span>基准情景</span>
+								</div>
+								<div class="right22">
+									<img src="img/legend2.png" alt="legend2">
+									<span>低碳情景</span>
+								</div>
+								<div class="right22">
+									<img src="img/legend3.png" alt="legend3">
+									<span>深蓝情景</span>
+								</div>
+								<div class="right0">
+									<img src="img/legend4.png" alt="legend4">
+									<span>强化低碳情景</span>
+								</div>							
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</body>
+<script>
+	var id=$('.trysvg').attr("id");
+	console.log(id)
+</script>
+</html>
